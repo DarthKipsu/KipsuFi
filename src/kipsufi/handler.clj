@@ -1,10 +1,12 @@
 (ns kipsufi.handler
   (:require [compojure.core :refer :all]
             [compojure.route :as route]
+            [kipsufi.views.layout :as layout]
+            [kipsufi.views.main :as main]
             [ring.middleware.defaults :refer [wrap-defaults site-defaults]]))
 
 (defroutes app-routes
-  (GET "/" [] "Hello World")
+  (GET "/" [] (layout/common-wrapper (main/content) main/title))
   (route/not-found "Not Found"))
 
 (def app

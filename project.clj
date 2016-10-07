@@ -2,8 +2,9 @@
   :description "My personal website"
   :url "darth.kipsu.fi"
   :min-lein-version "2.0.0"
-  :dependencies [[org.clojure/clojure "1.8.0"]
-                 [compojure "1.5.1"]
+  :dependencies [[compojure "1.5.1"]
+                 [hiccup "1.0.5"]
+                 [org.clojure/clojure "1.8.0"]
                  [ring/ring-defaults "0.2.1"]]
   :plugins [[lein-ring "0.9.7"]]
   :ring {:handler kipsufi.handler/app}
