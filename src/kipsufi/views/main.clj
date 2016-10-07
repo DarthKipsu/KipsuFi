@@ -3,4 +3,4 @@
 (def title "")
 
 (defn content []
-  [:div "Hello world!"])
+  [:div.main-bg])

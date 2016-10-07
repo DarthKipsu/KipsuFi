@@ -1,0 +1,10 @@
+.content.full {
+  height: 100vh;
+  width: 100vw;
+}
+.content.full .main-bg {
+  background-image: url(/images/main.jpg);
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}

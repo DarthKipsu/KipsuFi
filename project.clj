@@ -6,8 +6,10 @@
                  [hiccup "1.0.5"]
                  [org.clojure/clojure "1.8.0"]
                  [ring/ring-defaults "0.2.1"]]
-  :plugins [[lein-ring "0.9.7"]]
-  :ring {:handler kipsufi.handler/app}
-  :profiles
-  {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
-                        [ring/ring-mock "0.3.0"]]}})
+  :plugins [[lein-lesscss "1.2"]
+            [lein-ring "0.9.7"]]
+  :profiles {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
+                                  [ring/ring-mock "0.3.0"]]}}
+  :lesscss-paths ["src/less"]
+  :lesscss-output-path "resources/public/css/"
+  :ring {:handler kipsufi.handler/app})

@@ -1,13 +1,15 @@
 (ns kipsufi.views.layout
   (:require [hiccup.page :as h]))
 
-(defn common-wrapper [content title]
+(defn common-wrapper [content options]
   (h/html5
     [:head
      [:meta {:charset "utf-8"}]
-     [:title (str "darth.kipsu.fi " title)]
-     (h/include-css "//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")]
+     [:title (str "darth.kipsu.fi " (:title options))]
+     (h/include-css "//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+     (h/include-css "/css/common.css")]
     [:body
-     [:section.content content]
+     (if (:full-page? options) [:section.content.full content]
+       [:section.content.frame content])
      (h/include-js "//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
      (h/include-js "//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")]))

@@ -6,7 +6,7 @@
             [ring.middleware.defaults :refer [wrap-defaults site-defaults]]))
 
 (defroutes app-routes
-  (GET "/" [] (layout/common-wrapper (main/content) main/title))
+  (GET "/" [] (layout/common-wrapper (main/content) {:full-page? true :title main/title}))
   (route/not-found "Not Found"))
 
 (def app

@@ -14,3 +14,7 @@ To start a web server for the application, run:
 
     lein ring server
 
+To compile less files to css, run:
+    
+    lein lesscss
+
