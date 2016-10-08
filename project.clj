@@ -6,7 +6,8 @@
                  [hiccup "1.0.5"]
                  [org.clojure/clojure "1.8.0"]
                  [ring/ring-defaults "0.2.1"]]
-  :plugins [[lein-lesscss "1.2"]
+  :plugins [[lein-beanstalk "0.2.7"]
+            [lein-lesscss "1.2"]
             [lein-ring "0.9.7"]]
   :profiles {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
                                   [ring/ring-mock "0.3.0"]]}}
