@@ -1,4 +1,4 @@
-(defproject KipsuFi "0.1.0-SNAPSHOT"
+(defproject kipsufi "0.1.0-SNAPSHOT"
   :description "My personal website"
   :url "darth.kipsu.fi"
   :min-lein-version "2.0.0"
@@ -13,7 +13,7 @@
                                   [ring/ring-mock "0.3.0"]]}}
   :lesscss-paths ["src/less"]
   :lesscss-output-path "resources/public/css/"
-  :aws {:beanstalk {:environments [{:name "KipsuFi-prod"
-                                    :cname-prefix "KipsuFi-prod"}]
+  :aws {:beanstalk {:environments [{:name "kipsufi"
+                                    :cname-prefix "kipsufi-prod"}]
                     :region "eu-west-1"}}
   :ring {:handler kipsufi.handler/app})
