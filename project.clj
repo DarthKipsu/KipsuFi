@@ -13,4 +13,6 @@
                                   [ring/ring-mock "0.3.0"]]}}
   :lesscss-paths ["src/less"]
   :lesscss-output-path "resources/public/css/"
+  :aws {:beanstalk {:environments [KipsuFi-prod]
+                    :region "eu-west-1"}}
   :ring {:handler kipsufi.handler/app})
