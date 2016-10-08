@@ -6,13 +6,14 @@
                  [hiccup "1.0.5"]
                  [org.clojure/clojure "1.8.0"]
                  [ring/ring-defaults "0.2.1"]]
-  :plugins [[lein-beanstalk "0.2.7"]
+  :plugins [[kremers/lein-beanstalk "0.2.9"]
             [lein-lesscss "1.2"]
             [lein-ring "0.9.7"]]
   :profiles {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
                                   [ring/ring-mock "0.3.0"]]}}
   :lesscss-paths ["src/less"]
   :lesscss-output-path "resources/public/css/"
-  :aws {:beanstalk {:environments [KipsuFi-prod]
+  :aws {:beanstalk {:environments [{:name "KipsuFi-prod"
+                                    :cname-prefix "KipsuFi-prod"}]
                     :region "eu-west-1"}}
   :ring {:handler kipsufi.handler/app})
