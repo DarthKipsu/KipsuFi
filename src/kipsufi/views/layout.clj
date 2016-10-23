@@ -12,11 +12,11 @@
     [:body
      (if (:full-page? options) [:section.content.full 
                                 content 
-                                (svg/arrow {:rotated "0" :direction "next"}) 
-                                (svg/arrow {:rotated "180" :direction "prev"})]
+                                (svg/arrow {:direction "next"}) 
+                                (svg/arrow {:direction "prev"})]
        [:section.content.frame 
         content 
-        (svg/arrow {:rotated "90" :direction "next"}) 
-        (svg/arrow {:rotated "270" :direction "prev"})])
+        (svg/arrow {:direction "next"}) 
+        (svg/arrow {:direction "prev"})])
      (h/include-js "//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
      (h/include-js "//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")]))
