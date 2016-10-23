@@ -1,5 +1,31 @@
+.arrow {
+  height: 12vmin;
+  position: absolute;
+  width: 12vmin;
+}
+@media (min-width: 0) {
+  .arrow.next {
+    bottom: 5px;
+    right: 44vw;
+  }
+  .arrow.prev {
+    right: 44vw;
+    top: 5px;
+  }
+}
+@media (min-width: 200px) and (orientation: landscape) {
+  .arrow.next {
+    right: 5px;
+    top: 44vh;
+  }
+  .arrow.prev {
+    left: 5px;
+    top: 44vh;
+  }
+}
 .content.full {
   height: 100vh;
+  position: relative;
   width: 100vw;
 }
 .main-page {
@@ -21,7 +47,7 @@
   }
   .main-page .title {
     position: absolute;
-    bottom: 5vh;
+    bottom: 12vh;
     right: 10vw;
     font-size: 7vh;
   }
@@ -29,11 +55,11 @@
 @media (min-width: 200px) and (orientation: landscape) {
   .main-page .quote {
     font-size: 5vh;
-    padding: 35vh 0 0 10vw;
+    padding: 35vh 0 0 12vmax;
     width: 40vw;
   }
   .main-page .author {
-    padding-left: 10vw;
+    padding-left: 12vmax;
     width: 40vw;
   }
   .main-page .title {

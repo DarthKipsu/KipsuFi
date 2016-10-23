@@ -1,7 +1,40 @@
 // SHARED STYLES
 
+.arrow {
+  height: 12vmin;
+  position: absolute;
+  width: 12vmin;
+
+  @media (min-width: 0) {
+
+    &.next {
+      bottom: 5px;
+      right: 44vw;
+    }
+
+    &.prev {
+      right: 44vw;
+      top: 5px;
+    }
+  }
+
+  @media (min-width: 200px) and (orientation: landscape) {
+
+    &.next {
+      right: 5px;
+      top: 44vh;
+    }
+
+    &.prev {
+      left: 5px;
+      top: 44vh;
+    }
+  }
+}
+
 .content.full {
   height: 100vh;
+  position: relative;
   width: 100vw;
 }
 
@@ -29,7 +62,7 @@
 
     .title {
       position: absolute;
-      bottom: 5vh;
+      bottom: 12vh;
       right: 10vw;
       font-size: 7vh;
     }
@@ -39,12 +72,12 @@
 
     .quote {
       font-size: 5vh;
-      padding: 35vh 0 0 10vw;
+      padding: 35vh 0 0 12vmax;
       width: 40vw;
     }
 
     .author {
-      padding-left: 10vw;
+      padding-left: 12vmax;
       width: 40vw;
     }
 
