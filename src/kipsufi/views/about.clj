@@ -22,4 +22,6 @@
           the environment and spending time in the nature is one of the best ways to keep ones
           mind at ease."]]]
     [:div.right
-     [:img {:src "images/about.jpg"}]]]])
+     [:img {:src "images/about.jpg"}]]]
+   [:section.bits
+    [:div.title "Facts"]]])

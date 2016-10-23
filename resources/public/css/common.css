@@ -42,7 +42,7 @@
 }
 @media (min-width: 0) {
   .about-page {
-    padding: 10vh 5vw;
+    padding: 8vh 5vw;
     width: 100%;
   }
   .about-page section.intro {
@@ -59,8 +59,11 @@
 @media (min-width: 400px) and (min-height: 200px) and (orientation: landscape) {
   .about-page {
     margin: 0 10vw;
-    padding: 5vh 0;
+    padding: 0;
     width: 80vw;
+  }
+  .about-page section {
+    padding: 5vh 0;
   }
   .about-page section.intro img {
     border: 1px solid #aaa;
