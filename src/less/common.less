@@ -51,14 +51,21 @@
 
 .about-page {
 
+  .bits {
+    background-color: #e3e3e3;
+  }
+
   .title { 
     color: #aaa;
     font-size: 8vmin;
   }
 
   @media (min-width: 0) {
-    padding: 8vh 5vw;
     width: 100%;
+
+    section {
+      padding: 8vh 5vh;
+    }
 
     section.intro {
       width: 100%;
@@ -75,12 +82,10 @@
   }
 
   @media (min-width: 400px) and (min-height: 200px) and (orientation: landscape) {
-    margin: 0 10vw;
-    padding: 0;
-    width: 80vw;
 
     section {
-      padding: 5vh 0;
+      height: 100vh;
+      padding: 6vh 10vw;
     }
 
     section.intro {

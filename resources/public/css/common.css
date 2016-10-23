@@ -36,14 +36,19 @@
   position: relative;
   width: 100vw;
 }
+.about-page .bits {
+  background-color: #e3e3e3;
+}
 .about-page .title {
   color: #aaa;
   font-size: 8vmin;
 }
 @media (min-width: 0) {
   .about-page {
-    padding: 8vh 5vw;
     width: 100%;
+  }
+  .about-page section {
+    padding: 8vh 5vh;
   }
   .about-page section.intro {
     width: 100%;
@@ -57,13 +62,9 @@
   }
 }
 @media (min-width: 400px) and (min-height: 200px) and (orientation: landscape) {
-  .about-page {
-    margin: 0 10vw;
-    padding: 0;
-    width: 80vw;
-  }
   .about-page section {
-    padding: 5vh 0;
+    height: 100vh;
+    padding: 6vh 10vw;
   }
   .about-page section.intro img {
     border: 1px solid #aaa;
