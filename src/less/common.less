@@ -3,7 +3,7 @@
 .arrow {
   fill: rgba(0, 0, 0, 0.5);
   height: 12vmin;
-  position: absolute;
+  position: fixed;
   width: 12vmin;
 
   &:hover {
@@ -48,6 +48,59 @@
 }
 
 // PAGE-SPECIFIC STYLES
+
+.about-page {
+
+  .title { 
+    color: #aaa;
+    font-size: 8vmin;
+  }
+
+  @media (min-width: 0) {
+    padding: 10vh 5vw;
+    width: 100%;
+
+    section.intro {
+      width: 100%;
+
+      img {
+        height: 80vh;
+      }
+
+      .left {
+      }
+
+      .right {
+      }
+    }
+  }
+
+  @media (min-width: 200px) and (orientation: landscape) {
+    margin: 0 10vw;
+    padding: 5vh 0;
+    width: 80vw;
+
+    section.intro {
+
+      img {
+        border: 1px solid #aaa;
+        height: 90vh;
+        padding: 8px;
+        transform: rotate(3deg);
+      }
+
+      .left {
+        display: inline-block;
+        width: 49%;
+      }
+
+      .right {
+        display: inline-block;
+        width: 40%
+      }
+    }
+  }
+}
 
 .main-page {
   background-image: url(/images/main.jpg);

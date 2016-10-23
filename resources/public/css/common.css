@@ -1,7 +1,7 @@
 .arrow {
   fill: rgba(0, 0, 0, 0.5);
   height: 12vmin;
-  position: absolute;
+  position: fixed;
   width: 12vmin;
 }
 .arrow:hover {
@@ -35,6 +35,43 @@
   height: 100vh;
   position: relative;
   width: 100vw;
+}
+.about-page .title {
+  color: #aaa;
+  font-size: 8vmin;
+}
+@media (min-width: 0) {
+  .about-page {
+    padding: 10vh 5vw;
+    width: 100%;
+  }
+  .about-page section.intro {
+    width: 100%;
+  }
+  .about-page section.intro img {
+    height: 80vh;
+  }
+}
+@media (min-width: 200px) and (orientation: landscape) {
+  .about-page {
+    margin: 0 10vw;
+    padding: 5vh 0;
+    width: 80vw;
+  }
+  .about-page section.intro img {
+    border: 1px solid #aaa;
+    height: 90vh;
+    padding: 8px;
+    transform: rotate(3deg);
+  }
+  .about-page section.intro .left {
+    display: inline-block;
+    width: 49%;
+  }
+  .about-page section.intro .right {
+    display: inline-block;
+    width: 40%;
+  }
 }
 .main-page {
   background-image: url(/images/main.jpg);

@@ -1,11 +1,14 @@
 (ns kipsufi.views.about)
 
-(def title ":: About Me")
-
-(def next-page "/")
-
-(def prev-page "/")
+(def options {:full-page? false
+              :next-page "/"
+              :prev-page "/"
+              :title ":: About Me"})
 
 (defn content []
-  [:div.main-page
-   [:div.title "About me"]])
+  [:div.about-page
+   [:section.intro
+    [:div.left
+     [:div.title "About me"]]
+    [:div.right
+     [:img {:src "images/about.jpg"}]]]])

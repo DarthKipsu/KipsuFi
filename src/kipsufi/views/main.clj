@@ -1,10 +1,9 @@
 (ns kipsufi.views.main)
 
-(def title "")
-
-(def next-page "/about")
-
-(def prev-page "/about")
+(def options {:full-page? true 
+              :next-page "/about"
+              :prev-page "/about"
+              :title ""})
 
 (defn content []
   [:div.main-page
