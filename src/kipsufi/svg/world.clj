@@ -1,6 +1,6 @@
 (ns kipsufi.svg.world)
 
-(defn world-map [visited-countries]
+(defn world-map []
   [:svg.world {:xmlns "http://www.w3.org/2000/svg" 
          :xmlns:xlink "http://www.w3.org/1999/xlink"
          :viewBox "0 0 1050 650"}

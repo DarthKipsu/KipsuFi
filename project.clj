@@ -1,16 +1,25 @@
 (defproject kipsufi "0.1.0-SNAPSHOT"
   :aot [kipsufi.handler]
+  :cljsbuild {:builds [{:source-paths ["src/cljs"]
+                        :jar true
+                        :compiler {:output-to "resources/public/js/script.js"
+                                   :optimizations :whitespace
+                                   :pretty-print true}}]}
   :dependencies [[compojure "1.5.1"]
+                 [domina "1.0.3"]
                  [hiccup "1.0.5"]
                  [org.clojure/clojure "1.8.0"]
+                 [org.clojure/clojurescript "1.9.293"]
                  [ring/ring-defaults "0.2.1"]
                  [ring/ring-jetty-adapter "1.5.0"]]
   :description "My personal website"
-  :lesscss-output-path "resources/public/css/"
+  :hooks [leiningen.cljsbuild]
+  :lesscss-output-path "resources/public/css"
   :lesscss-paths ["src/less"]
   :main kipsufi.handler
   :min-lein-version "2.0.0"
-  :plugins [[lein-lesscss "1.2"]
+  :plugins [[lein-cljsbuild "1.1.4"]
+            [lein-lesscss "1.2"]
             [lein-ring "0.9.7"]]
   :profiles {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
                                   [ring/ring-mock "0.3.0"]]}}

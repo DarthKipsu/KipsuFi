@@ -64,4 +64,4 @@
 
    [:section.countries
     [:div.title "Places I've visited"]
-    (svg/world-map #{})]])
+    (svg/world-map)]])
