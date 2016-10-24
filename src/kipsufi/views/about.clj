@@ -56,4 +56,7 @@
       [:div.td [:a {:href "//facebook.com/verna.koskinen"} "Verna Koskinen"]]]
      [:div.tr
       [:div.td "Lives in:"]
-      [:div.td "Zürich, Switzerland"]]]]])
+      [:div.td "Zürich, Switzerland"]]
+     [:div.tr
+      [:div.td "From:"]
+      [:div.td "Helsinki, Finland"]]]]])
