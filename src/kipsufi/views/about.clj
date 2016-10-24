@@ -1,4 +1,5 @@
-(ns kipsufi.views.about)
+(ns kipsufi.views.about
+  (:require [kipsufi.svg.world :as svg]))
 
 (def options {:full-page? false
               :next-page "/"
@@ -62,4 +63,5 @@
       [:div.td "Helsinki, Finland"]]]]
 
    [:section.countries
-    [:div.title "Places I've visited"]]])
+    [:div.title "Places I've visited"]
+    (svg/world-map #{})]])
