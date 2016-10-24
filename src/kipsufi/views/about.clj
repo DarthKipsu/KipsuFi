@@ -59,4 +59,7 @@
       [:div.td "Zürich, Switzerland"]]
      [:div.tr
       [:div.td "From:"]
-      [:div.td "Helsinki, Finland"]]]]])
+      [:div.td "Helsinki, Finland"]]]]
+
+   [:section.countries
+    [:div.title "Places I've visited"]]])

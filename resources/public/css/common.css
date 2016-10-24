@@ -39,6 +39,12 @@
 .about-page .bits {
   background-color: #e3e3e3;
 }
+.about-page .countries {
+  background-color: #f2f2ff;
+}
+.about-page .countries .title {
+  color: #6daeba;
+}
 .about-page .title {
   color: #aaa;
   font-size: 8vmin;
