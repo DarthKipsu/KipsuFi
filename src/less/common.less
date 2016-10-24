@@ -60,8 +60,41 @@
     font-size: 8vmin;
   }
 
+  .subtitle {
+    color: #666;
+    font-size: 4vmin;
+    font-weight: 600;
+    margin-top: 5vmin;
+  }
+
+  .table {
+    display: table;
+    margin-top: 5vmin;
+
+    .space {
+      padding: 2vmin;
+    }
+
+    .tr {
+      display: table-row;
+      
+      .td {
+        display: table-cell;
+
+        &:nth-child(1) {
+          width: 30vw;
+        }
+      }
+    }
+  }
+
   @media (min-width: 0) {
     width: 100%;
+
+    p, .td {
+      color: #666;
+      font-size: 4vmin;
+    }
 
     section {
       padding: 8vh 5vh;
@@ -69,19 +102,34 @@
 
     section.intro {
       width: 100%;
+    }
 
-      img {
-        height: 80vh;
+    img {
+      max-width: 90%;
+
+      &:nth-child(1) {
+        display: none;
       }
 
-      p {
-        color: #666;
-        font-size: 4vmin;
+      &:nth-child(2n) {
+        display: block;
       }
     }
   }
 
   @media (min-width: 400px) and (min-height: 200px) and (orientation: landscape) {
+
+    p, .td {
+      font-size: 3vmin;
+    }
+
+    .table {
+      margin-left: 5vmin;
+
+      .tr  .td:nth-child(1) {
+        width: 20vw;
+      }
+    }
 
     section {
       height: 100vh;
@@ -92,28 +140,28 @@
 
       img {
         border: 1px solid #aaa;
-        height: 100%;
-        max-height: 90vmin;
-        width: 100%;
+        float: right;
+        margin: 8px;
+        max-height: 100vh;
+        max-width: 40%;
         padding: 8px;
         transform: rotate(3deg);
+
+        &:nth-child(1) {
+          display: block;
+        }
+
+        &:nth-child(2n) {
+          display: none;
+        }
       }
 
       p {
-        font-size: 3vmin;
+        padding: 0 5%;
       }
 
-      .left {
-        display: inline-block;
-        padding: 5%;
-        vertical-align: top;
-        width: 59%;
-      }
-
-      .right {
-        display: inline-block;
-        vertical-align: top;
-        width: 40%
+      .title {
+        margin: 3vmin;
       }
     }
   }

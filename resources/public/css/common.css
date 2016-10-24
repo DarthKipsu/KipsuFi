@@ -43,9 +43,36 @@
   color: #aaa;
   font-size: 8vmin;
 }
+.about-page .subtitle {
+  color: #666;
+  font-size: 4vmin;
+  font-weight: 600;
+  margin-top: 5vmin;
+}
+.about-page .table {
+  display: table;
+  margin-top: 5vmin;
+}
+.about-page .table .space {
+  padding: 2vmin;
+}
+.about-page .table .tr {
+  display: table-row;
+}
+.about-page .table .tr .td {
+  display: table-cell;
+}
+.about-page .table .tr .td:nth-child(1) {
+  width: 30vw;
+}
 @media (min-width: 0) {
   .about-page {
     width: 100%;
+  }
+  .about-page p,
+  .about-page .td {
+    color: #666;
+    font-size: 4vmin;
   }
   .about-page section {
     padding: 8vh 5vh;
@@ -53,40 +80,51 @@
   .about-page section.intro {
     width: 100%;
   }
-  .about-page section.intro img {
-    height: 80vh;
+  .about-page img {
+    max-width: 90%;
   }
-  .about-page section.intro p {
-    color: #666;
-    font-size: 4vmin;
+  .about-page img:nth-child(1) {
+    display: none;
+  }
+  .about-page img:nth-child(2n) {
+    display: block;
   }
 }
 @media (min-width: 400px) and (min-height: 200px) and (orientation: landscape) {
+  .about-page p,
+  .about-page .td {
+    font-size: 3vmin;
+  }
+  .about-page .table {
+    margin-left: 5vmin;
+  }
+  .about-page .table .tr .td:nth-child(1) {
+    width: 20vw;
+  }
   .about-page section {
     height: 100vh;
     padding: 6vh 10vw;
   }
   .about-page section.intro img {
     border: 1px solid #aaa;
-    height: 100%;
-    max-height: 90vmin;
-    width: 100%;
+    float: right;
+    margin: 8px;
+    max-height: 100vh;
+    max-width: 40%;
     padding: 8px;
     transform: rotate(3deg);
   }
+  .about-page section.intro img:nth-child(1) {
+    display: block;
+  }
+  .about-page section.intro img:nth-child(2n) {
+    display: none;
+  }
   .about-page section.intro p {
-    font-size: 3vmin;
+    padding: 0 5%;
   }
-  .about-page section.intro .left {
-    display: inline-block;
-    padding: 5%;
-    vertical-align: top;
-    width: 59%;
-  }
-  .about-page section.intro .right {
-    display: inline-block;
-    vertical-align: top;
-    width: 40%;
+  .about-page section.intro .title {
+    margin: 3vmin;
   }
 }
 .main-page {
