@@ -79,6 +79,9 @@
 .about-page .world .visited {
   fill: #06600b;
 }
+.about-page .world .visited:hover {
+  fill: #098767;
+}
 @media (min-width: 0) {
   .about-page {
     width: 100%;
