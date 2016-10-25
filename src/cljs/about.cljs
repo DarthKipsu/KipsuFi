@@ -1,6 +1,5 @@
 (ns cljs.about
-  (:require [domina :as dom]
-            [domina.css :as css]))
+  (:use [dommy.core :only [add-class! sel1]]))
 
 (enable-console-print!)
 
@@ -47,9 +46,12 @@
     :name "Sweden"
     :visited []}])
 
-(defn set-colors! [country] 
-  (println country)
-  (dom/set-styles! (css/sel (str "#" country)) {:fill "red"}))
+(defn- element-by-id [selector]
+  (sel1 (keyword (str "#" selector))))
 
-(doseq [visit visited-countries] (set-colors! (get visit :country)))
+(defn- set-visited-class! [country] 
+  (let [element (element-by-id country)]
+    (if (some? element) (add-class! element :visited))))
+
+(doseq [visit visited-countries] (set-visited-class! (get visit :country)))
 

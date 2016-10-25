@@ -6,10 +6,10 @@
                                    :optimizations :whitespace
                                    :pretty-print true}}]}
   :dependencies [[compojure "1.5.1"]
-                 [domina "1.0.3"]
                  [hiccup "1.0.5"]
                  [org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.9.293"]
+                 [prismatic/dommy "1.0.0"]
                  [ring/ring-defaults "0.2.1"]
                  [ring/ring-jetty-adapter "1.5.0"]]
   :description "My personal website"
