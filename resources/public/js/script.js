@@ -39494,25 +39494,44 @@ goog.require("cljs.core");
 goog.require("dommy.core");
 goog.require("cljs_time.core");
 cljs.core.enable_console_print_BANG_.call(null);
-cljs.about.visited_countries = new cljs.core.PersistentVector(null, 14, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "country", "country", 312965309), "AT", new cljs.core.Keyword(null, "name", "name", 1843675177), "Austria", new cljs.core.Keyword(null, "visited", "visited", -1610853875), cljs.core.PersistentVector.EMPTY], null), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "country", "country", 312965309), 
-"CH", new cljs.core.Keyword(null, "name", "name", 1843675177), "Switzerland", new cljs.core.Keyword(null, "visited", "visited", -1610853875), cljs.core.PersistentVector.EMPTY], null), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "country", "country", 312965309), "DE", new cljs.core.Keyword(null, "name", "name", 1843675177), "Germany", new cljs.core.Keyword(null, "visited", "visited", -1610853875), cljs.core.PersistentVector.EMPTY], null), new cljs.core.PersistentArrayMap(null, 
-3, [new cljs.core.Keyword(null, "country", "country", 312965309), "DK", new cljs.core.Keyword(null, "name", "name", 1843675177), "Denmark", new cljs.core.Keyword(null, "visited", "visited", -1610853875), cljs.core.PersistentVector.EMPTY], null), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "country", "country", 312965309), "EE", new cljs.core.Keyword(null, "name", "name", 1843675177), "Estonia", new cljs.core.Keyword(null, "visited", "visited", -1610853875), cljs.core.PersistentVector.EMPTY], 
-null), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "country", "country", 312965309), "ES", new cljs.core.Keyword(null, "name", "name", 1843675177), "Spain", new cljs.core.Keyword(null, "visited", "visited", -1610853875), cljs.core.PersistentVector.EMPTY], null), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "country", "country", 312965309), "FI", new cljs.core.Keyword(null, "name", "name", 1843675177), "Finland", new cljs.core.Keyword(null, "visited", 
-"visited", -1610853875), new cljs.core.PersistentVector(null, 19, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 1985, 4, 28), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2010, 1, 14)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 
-2010, 1, 16), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2010, 7, 10)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2010, 7, 11), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2010, 7, 20)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), 
-cljs_time.core.date_time.call(null, 2010, 7, 26), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2011, 1, 16)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2011, 1, 23), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2011, 7, 23)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, 
-"arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2011, 7, 30), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2011, 9, 4)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2011, 9, 6), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2012, 4, 7)], null), new cljs.core.PersistentArrayMap(null, 
-2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2012, 4, 13), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2012, 7, 15)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2012, 7, 18), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2012, 8, 19)], null), 
-new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2012, 8, 20), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2013, 6, 3)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2013, 6, 3), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 
-2013, 9, 27)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2013, 9, 29), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2014, 5, 2)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2014, 5, 2), new cljs.core.Keyword(null, "left", "left", -399115937), 
-cljs_time.core.date_time.call(null, 2014, 6, 20)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2014, 6, 21), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2014, 7, 17)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2014, 7, 18), new cljs.core.Keyword(null, 
-"left", "left", -399115937), cljs_time.core.date_time.call(null, 2015, 7, 4)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2015, 9, 26), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2016, 2, 22)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2016, 
-2, 24), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2016, 5, 14)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2016, 8, 27), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2016, 9, 12)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 
-2016, 9, 13), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.now.call(null)], null)], null)], null), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "country", "country", 312965309), "FR", new cljs.core.Keyword(null, "name", "name", 1843675177), "France", new cljs.core.Keyword(null, "visited", "visited", -1610853875), cljs.core.PersistentVector.EMPTY], null), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "country", "country", 
-312965309), "GB", new cljs.core.Keyword(null, "name", "name", 1843675177), "United Kingdom", new cljs.core.Keyword(null, "visited", "visited", -1610853875), cljs.core.PersistentVector.EMPTY], null), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "country", "country", 312965309), "GR", new cljs.core.Keyword(null, "name", "name", 1843675177), "Greece", new cljs.core.Keyword(null, "visited", "visited", -1610853875), cljs.core.PersistentVector.EMPTY], null), new cljs.core.PersistentArrayMap(null, 
-3, [new cljs.core.Keyword(null, "country", "country", 312965309), "IT", new cljs.core.Keyword(null, "name", "name", 1843675177), "Italy", new cljs.core.Keyword(null, "visited", "visited", -1610853875), cljs.core.PersistentVector.EMPTY], null), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "country", "country", 312965309), "LI", new cljs.core.Keyword(null, "name", "name", 1843675177), "Liechenstein", new cljs.core.Keyword(null, "visited", "visited", -1610853875), cljs.core.PersistentVector.EMPTY], 
-null), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "country", "country", 312965309), "NO", new cljs.core.Keyword(null, "name", "name", 1843675177), "Norway", new cljs.core.Keyword(null, "visited", "visited", -1610853875), cljs.core.PersistentVector.EMPTY], null), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "country", "country", 312965309), "SE", new cljs.core.Keyword(null, "name", "name", 1843675177), "Sweden", new cljs.core.Keyword(null, "visited", 
-"visited", -1610853875), cljs.core.PersistentVector.EMPTY], null)], null);
+cljs.about.visited_countries = new cljs.core.PersistentVector(null, 14, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "country", "country", 312965309), "AT", new cljs.core.Keyword(null, "name", "name", 1843675177), "Austria", new cljs.core.Keyword(null, "visited", "visited", -1610853875), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, 
+"arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2015, 7, 31), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2015, 8, 2)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2015, 8, 7), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2015, 8, 9)], null), new cljs.core.PersistentArrayMap(null, 
+2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2016, 2, 22), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2016, 2, 24)], null)], null)], null), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "country", "country", 312965309), "CH", new cljs.core.Keyword(null, "name", "name", 1843675177), "Switzerland", new cljs.core.Keyword(null, "visited", "visited", -1610853875), new cljs.core.PersistentVector(null, 
+6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2016, 5, 14), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2016, 6, 4)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2016, 6, 5), new cljs.core.Keyword(null, "left", 
+"left", -399115937), cljs_time.core.date_time.call(null, 2016, 6, 25)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2016, 6, 26), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2016, 7, 16)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2016, 7, 
+17), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2016, 7, 29)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2016, 8, 1), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2016, 8, 27)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 
+2016, 9, 12), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2016, 9, 13)], null)], null)], null), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "country", "country", 312965309), "DE", new cljs.core.Keyword(null, "name", "name", 1843675177), "Germany", new cljs.core.Keyword(null, "visited", "visited", -1610853875), new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 
+2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2015, 7, 4), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2015, 7, 31)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2015, 8, 2), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2015, 8, 7)], null), new cljs.core.PersistentArrayMap(null, 
+2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2015, 8, 9), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2015, 8, 14)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2015, 8, 16), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2015, 9, 26)], null)], 
+null)], null), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "country", "country", 312965309), "DK", new cljs.core.Keyword(null, "name", "name", 1843675177), "Denmark", new cljs.core.Keyword(null, "visited", "visited", -1610853875), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2012, 4, 7), new cljs.core.Keyword(null, 
+"left", "left", -399115937), cljs_time.core.date_time.call(null, 2012, 4, 7)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2012, 7, 15), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2012, 7, 15)], null)], null)], null), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "country", "country", 312965309), "EE", new cljs.core.Keyword(null, 
+"name", "name", 1843675177), "Estonia", new cljs.core.Keyword(null, "visited", "visited", -1610853875), new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2012, 8, 19), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2012, 8, 20)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, 
+"arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2013, 9, 27), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2013, 9, 29)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2014, 5, 2), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2014, 5, 2)], null), new cljs.core.PersistentArrayMap(null, 
+2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2014, 7, 17), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2014, 7, 18)], null)], null)], null), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "country", "country", 312965309), "ES", new cljs.core.Keyword(null, "name", "name", 1843675177), "Spain", new cljs.core.Keyword(null, "visited", "visited", -1610853875), new cljs.core.PersistentVector(null, 
+1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2011, 1, 16), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2011, 1, 23)], null)], null)], null), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "country", "country", 312965309), "FI", new cljs.core.Keyword(null, "name", "name", 1843675177), 
+"Finland", new cljs.core.Keyword(null, "visited", "visited", -1610853875), new cljs.core.PersistentVector(null, 19, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 1985, 4, 28), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2010, 1, 14)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, 
+"arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2010, 1, 16), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2010, 7, 10)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2010, 7, 11), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2010, 7, 20)], null), new cljs.core.PersistentArrayMap(null, 
+2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2010, 7, 26), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2011, 1, 16)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2011, 1, 23), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2011, 7, 23)], null), 
+new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2011, 7, 30), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2011, 9, 4)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2011, 9, 6), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 
+2012, 4, 7)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2012, 4, 13), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2012, 7, 15)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2012, 7, 18), new cljs.core.Keyword(null, "left", "left", -399115937), 
+cljs_time.core.date_time.call(null, 2012, 8, 19)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2012, 8, 20), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2013, 6, 3)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2013, 6, 3), new cljs.core.Keyword(null, 
+"left", "left", -399115937), cljs_time.core.date_time.call(null, 2013, 9, 27)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2013, 9, 29), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2014, 5, 2)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2014, 
+5, 2), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2014, 6, 20)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2014, 6, 21), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2014, 7, 17)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 
+2014, 7, 18), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2015, 7, 4)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2015, 9, 26), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2016, 2, 22)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), 
+cljs_time.core.date_time.call(null, 2016, 2, 24), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2016, 5, 14)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2016, 8, 27), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2016, 9, 12)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, 
+"arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2016, 9, 13), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.now.call(null)], null)], null)], null), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "country", "country", 312965309), "FR", new cljs.core.Keyword(null, "name", "name", 1843675177), "France", new cljs.core.Keyword(null, "visited", "visited", -1610853875), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, 
+[new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2016, 6, 25), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2016, 6, 26)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2016, 7, 29), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 
+2016, 8, 1)], null)], null)], null), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "country", "country", 312965309), "GB", new cljs.core.Keyword(null, "name", "name", 1843675177), "United Kingdom", new cljs.core.Keyword(null, "visited", "visited", -1610853875), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 
+2012, 7, 15), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2012, 7, 18)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2015, 8, 14), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2015, 8, 16)], null)], null)], null), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "country", "country", 
+312965309), "GR", new cljs.core.Keyword(null, "name", "name", 1843675177), "Greece", new cljs.core.Keyword(null, "visited", "visited", -1610853875), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2011, 7, 23), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2011, 7, 30)], null)], 
+null)], null), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "country", "country", 312965309), "IT", new cljs.core.Keyword(null, "name", "name", 1843675177), "Italy", new cljs.core.Keyword(null, "visited", "visited", -1610853875), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2012, 4, 9), new cljs.core.Keyword(null, 
+"left", "left", -399115937), cljs_time.core.date_time.call(null, 2012, 4, 13)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2016, 7, 16), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2016, 7, 17)], null)], null)], null), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "country", "country", 312965309), "LI", new cljs.core.Keyword(null, 
+"name", "name", 1843675177), "Liechenstein", new cljs.core.Keyword(null, "visited", "visited", -1610853875), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2016, 6, 4), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2016, 6, 5)], null)], null)], null), new cljs.core.PersistentArrayMap(null, 
+3, [new cljs.core.Keyword(null, "country", "country", 312965309), "NO", new cljs.core.Keyword(null, "name", "name", 1843675177), "Norway", new cljs.core.Keyword(null, "visited", "visited", -1610853875), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2010, 7, 20), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 
+2010, 7, 26)], null)], null)], null), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "country", "country", 312965309), "SE", new cljs.core.Keyword(null, "name", "name", 1843675177), "Sweden", new cljs.core.Keyword(null, "visited", "visited", -1610853875), new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 
+2010, 1, 14), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2010, 1, 16)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2010, 7, 10), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2010, 7, 11)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), 
+cljs_time.core.date_time.call(null, 2011, 9, 4), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2011, 9, 6)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2013, 6, 3), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2013, 6, 3)], null), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, 
+"arrived", "arrived", -777038897), cljs_time.core.date_time.call(null, 2014, 6, 20), new cljs.core.Keyword(null, "left", "left", -399115937), cljs_time.core.date_time.call(null, 2014, 6, 21)], null)], null)], null)], null);
 cljs.about.element_by_id = function cljs$about$element_by_id(selector) {
   return document.querySelector(dommy.core.selector.call(null, cljs.core.keyword.call(null, [cljs.core.str("#"), cljs.core.str(selector)].join(""))));
 };
@@ -39528,49 +39547,49 @@ cljs.about.set_visited_class_BANG_ = function cljs$about$set_visited_class_BANG_
   }
 };
 cljs.about.paint_visited_countries_BANG_ = function cljs$about$paint_visited_countries_BANG_() {
-  var seq__9835 = cljs.core.seq.call(null, cljs.about.visited_countries);
-  var chunk__9836 = null;
-  var count__9837 = 0;
-  var i__9838 = 0;
+  var seq__10467 = cljs.core.seq.call(null, cljs.about.visited_countries);
+  var chunk__10468 = null;
+  var count__10469 = 0;
+  var i__10470 = 0;
   while (true) {
-    if (i__9838 < count__9837) {
-      var visit = cljs.core._nth.call(null, chunk__9836, i__9838);
+    if (i__10470 < count__10469) {
+      var visit = cljs.core._nth.call(null, chunk__10468, i__10470);
       cljs.about.set_visited_class_BANG_.call(null, cljs.core.get.call(null, visit, new cljs.core.Keyword(null, "country", "country", 312965309)));
-      var G__9839 = seq__9835;
-      var G__9840 = chunk__9836;
-      var G__9841 = count__9837;
-      var G__9842 = i__9838 + 1;
-      seq__9835 = G__9839;
-      chunk__9836 = G__9840;
-      count__9837 = G__9841;
-      i__9838 = G__9842;
+      var G__10471 = seq__10467;
+      var G__10472 = chunk__10468;
+      var G__10473 = count__10469;
+      var G__10474 = i__10470 + 1;
+      seq__10467 = G__10471;
+      chunk__10468 = G__10472;
+      count__10469 = G__10473;
+      i__10470 = G__10474;
       continue;
     } else {
-      var temp__4657__auto__ = cljs.core.seq.call(null, seq__9835);
+      var temp__4657__auto__ = cljs.core.seq.call(null, seq__10467);
       if (temp__4657__auto__) {
-        var seq__9835__$1 = temp__4657__auto__;
-        if (cljs.core.chunked_seq_QMARK_.call(null, seq__9835__$1)) {
-          var c__7357__auto__ = cljs.core.chunk_first.call(null, seq__9835__$1);
-          var G__9843 = cljs.core.chunk_rest.call(null, seq__9835__$1);
-          var G__9844 = c__7357__auto__;
-          var G__9845 = cljs.core.count.call(null, c__7357__auto__);
-          var G__9846 = 0;
-          seq__9835 = G__9843;
-          chunk__9836 = G__9844;
-          count__9837 = G__9845;
-          i__9838 = G__9846;
+        var seq__10467__$1 = temp__4657__auto__;
+        if (cljs.core.chunked_seq_QMARK_.call(null, seq__10467__$1)) {
+          var c__7357__auto__ = cljs.core.chunk_first.call(null, seq__10467__$1);
+          var G__10475 = cljs.core.chunk_rest.call(null, seq__10467__$1);
+          var G__10476 = c__7357__auto__;
+          var G__10477 = cljs.core.count.call(null, c__7357__auto__);
+          var G__10478 = 0;
+          seq__10467 = G__10475;
+          chunk__10468 = G__10476;
+          count__10469 = G__10477;
+          i__10470 = G__10478;
           continue;
         } else {
-          var visit = cljs.core.first.call(null, seq__9835__$1);
+          var visit = cljs.core.first.call(null, seq__10467__$1);
           cljs.about.set_visited_class_BANG_.call(null, cljs.core.get.call(null, visit, new cljs.core.Keyword(null, "country", "country", 312965309)));
-          var G__9847 = cljs.core.next.call(null, seq__9835__$1);
-          var G__9848 = null;
-          var G__9849 = 0;
-          var G__9850 = 0;
-          seq__9835 = G__9847;
-          chunk__9836 = G__9848;
-          count__9837 = G__9849;
-          i__9838 = G__9850;
+          var G__10479 = cljs.core.next.call(null, seq__10467__$1);
+          var G__10480 = null;
+          var G__10481 = 0;
+          var G__10482 = 0;
+          seq__10467 = G__10479;
+          chunk__10468 = G__10480;
+          count__10469 = G__10481;
+          i__10470 = G__10482;
           continue;
         }
       } else {
@@ -39619,49 +39638,49 @@ cljs.about.country_info = function cljs$about$country_info(country) {
   return div;
 };
 cljs.about.append_country_info = function cljs$about$append_country_info() {
-  var seq__9855 = cljs.core.seq.call(null, cljs.about.visited_countries);
-  var chunk__9856 = null;
-  var count__9857 = 0;
-  var i__9858 = 0;
+  var seq__10487 = cljs.core.seq.call(null, cljs.about.visited_countries);
+  var chunk__10488 = null;
+  var count__10489 = 0;
+  var i__10490 = 0;
   while (true) {
-    if (i__9858 < count__9857) {
-      var visit = cljs.core._nth.call(null, chunk__9856, i__9858);
+    if (i__10490 < count__10489) {
+      var visit = cljs.core._nth.call(null, chunk__10488, i__10490);
       cljs.about.append_element.call(null, cljs.about.country_info.call(null, visit), "mapinfo");
-      var G__9859 = seq__9855;
-      var G__9860 = chunk__9856;
-      var G__9861 = count__9857;
-      var G__9862 = i__9858 + 1;
-      seq__9855 = G__9859;
-      chunk__9856 = G__9860;
-      count__9857 = G__9861;
-      i__9858 = G__9862;
+      var G__10491 = seq__10487;
+      var G__10492 = chunk__10488;
+      var G__10493 = count__10489;
+      var G__10494 = i__10490 + 1;
+      seq__10487 = G__10491;
+      chunk__10488 = G__10492;
+      count__10489 = G__10493;
+      i__10490 = G__10494;
       continue;
     } else {
-      var temp__4657__auto__ = cljs.core.seq.call(null, seq__9855);
+      var temp__4657__auto__ = cljs.core.seq.call(null, seq__10487);
       if (temp__4657__auto__) {
-        var seq__9855__$1 = temp__4657__auto__;
-        if (cljs.core.chunked_seq_QMARK_.call(null, seq__9855__$1)) {
-          var c__7357__auto__ = cljs.core.chunk_first.call(null, seq__9855__$1);
-          var G__9863 = cljs.core.chunk_rest.call(null, seq__9855__$1);
-          var G__9864 = c__7357__auto__;
-          var G__9865 = cljs.core.count.call(null, c__7357__auto__);
-          var G__9866 = 0;
-          seq__9855 = G__9863;
-          chunk__9856 = G__9864;
-          count__9857 = G__9865;
-          i__9858 = G__9866;
+        var seq__10487__$1 = temp__4657__auto__;
+        if (cljs.core.chunked_seq_QMARK_.call(null, seq__10487__$1)) {
+          var c__7357__auto__ = cljs.core.chunk_first.call(null, seq__10487__$1);
+          var G__10495 = cljs.core.chunk_rest.call(null, seq__10487__$1);
+          var G__10496 = c__7357__auto__;
+          var G__10497 = cljs.core.count.call(null, c__7357__auto__);
+          var G__10498 = 0;
+          seq__10487 = G__10495;
+          chunk__10488 = G__10496;
+          count__10489 = G__10497;
+          i__10490 = G__10498;
           continue;
         } else {
-          var visit = cljs.core.first.call(null, seq__9855__$1);
+          var visit = cljs.core.first.call(null, seq__10487__$1);
           cljs.about.append_element.call(null, cljs.about.country_info.call(null, visit), "mapinfo");
-          var G__9867 = cljs.core.next.call(null, seq__9855__$1);
-          var G__9868 = null;
-          var G__9869 = 0;
-          var G__9870 = 0;
-          seq__9855 = G__9867;
-          chunk__9856 = G__9868;
-          count__9857 = G__9869;
-          i__9858 = G__9870;
+          var G__10499 = cljs.core.next.call(null, seq__10487__$1);
+          var G__10500 = null;
+          var G__10501 = 0;
+          var G__10502 = 0;
+          seq__10487 = G__10499;
+          chunk__10488 = G__10500;
+          count__10489 = G__10501;
+          i__10490 = G__10502;
           continue;
         }
       } else {
