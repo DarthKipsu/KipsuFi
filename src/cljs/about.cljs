@@ -135,6 +135,8 @@
     (append! div country-text)
     (append! div br)
     (append! div stayed-for-text)
+    (add-class! div (get country :country))
+    (add-class! div "country-info")
     div))
 
 (defn- append-country-info []

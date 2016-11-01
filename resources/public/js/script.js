@@ -39547,49 +39547,49 @@ cljs.about.set_visited_class_BANG_ = function cljs$about$set_visited_class_BANG_
   }
 };
 cljs.about.paint_visited_countries_BANG_ = function cljs$about$paint_visited_countries_BANG_() {
-  var seq__10723 = cljs.core.seq.call(null, cljs.about.visited_countries);
-  var chunk__10724 = null;
-  var count__10725 = 0;
-  var i__10726 = 0;
+  var seq__10849 = cljs.core.seq.call(null, cljs.about.visited_countries);
+  var chunk__10850 = null;
+  var count__10851 = 0;
+  var i__10852 = 0;
   while (true) {
-    if (i__10726 < count__10725) {
-      var visit = cljs.core._nth.call(null, chunk__10724, i__10726);
+    if (i__10852 < count__10851) {
+      var visit = cljs.core._nth.call(null, chunk__10850, i__10852);
       cljs.about.set_visited_class_BANG_.call(null, cljs.core.get.call(null, visit, new cljs.core.Keyword(null, "country", "country", 312965309)));
-      var G__10727 = seq__10723;
-      var G__10728 = chunk__10724;
-      var G__10729 = count__10725;
-      var G__10730 = i__10726 + 1;
-      seq__10723 = G__10727;
-      chunk__10724 = G__10728;
-      count__10725 = G__10729;
-      i__10726 = G__10730;
+      var G__10853 = seq__10849;
+      var G__10854 = chunk__10850;
+      var G__10855 = count__10851;
+      var G__10856 = i__10852 + 1;
+      seq__10849 = G__10853;
+      chunk__10850 = G__10854;
+      count__10851 = G__10855;
+      i__10852 = G__10856;
       continue;
     } else {
-      var temp__4657__auto__ = cljs.core.seq.call(null, seq__10723);
+      var temp__4657__auto__ = cljs.core.seq.call(null, seq__10849);
       if (temp__4657__auto__) {
-        var seq__10723__$1 = temp__4657__auto__;
-        if (cljs.core.chunked_seq_QMARK_.call(null, seq__10723__$1)) {
-          var c__7357__auto__ = cljs.core.chunk_first.call(null, seq__10723__$1);
-          var G__10731 = cljs.core.chunk_rest.call(null, seq__10723__$1);
-          var G__10732 = c__7357__auto__;
-          var G__10733 = cljs.core.count.call(null, c__7357__auto__);
-          var G__10734 = 0;
-          seq__10723 = G__10731;
-          chunk__10724 = G__10732;
-          count__10725 = G__10733;
-          i__10726 = G__10734;
+        var seq__10849__$1 = temp__4657__auto__;
+        if (cljs.core.chunked_seq_QMARK_.call(null, seq__10849__$1)) {
+          var c__7357__auto__ = cljs.core.chunk_first.call(null, seq__10849__$1);
+          var G__10857 = cljs.core.chunk_rest.call(null, seq__10849__$1);
+          var G__10858 = c__7357__auto__;
+          var G__10859 = cljs.core.count.call(null, c__7357__auto__);
+          var G__10860 = 0;
+          seq__10849 = G__10857;
+          chunk__10850 = G__10858;
+          count__10851 = G__10859;
+          i__10852 = G__10860;
           continue;
         } else {
-          var visit = cljs.core.first.call(null, seq__10723__$1);
+          var visit = cljs.core.first.call(null, seq__10849__$1);
           cljs.about.set_visited_class_BANG_.call(null, cljs.core.get.call(null, visit, new cljs.core.Keyword(null, "country", "country", 312965309)));
-          var G__10735 = cljs.core.next.call(null, seq__10723__$1);
-          var G__10736 = null;
-          var G__10737 = 0;
-          var G__10738 = 0;
-          seq__10723 = G__10735;
-          chunk__10724 = G__10736;
-          count__10725 = G__10737;
-          i__10726 = G__10738;
+          var G__10861 = cljs.core.next.call(null, seq__10849__$1);
+          var G__10862 = null;
+          var G__10863 = 0;
+          var G__10864 = 0;
+          seq__10849 = G__10861;
+          chunk__10850 = G__10862;
+          count__10851 = G__10863;
+          i__10852 = G__10864;
           continue;
         }
       } else {
@@ -39650,52 +39650,54 @@ cljs.about.country_info = function cljs$about$country_info(country) {
   dommy.core.append_BANG_.call(null, div, country_text);
   dommy.core.append_BANG_.call(null, div, br);
   dommy.core.append_BANG_.call(null, div, stayed_for_text);
+  dommy.core.add_class_BANG_.call(null, div, cljs.core.get.call(null, country, new cljs.core.Keyword(null, "country", "country", 312965309)));
+  dommy.core.add_class_BANG_.call(null, div, "country-info");
   return div;
 };
 cljs.about.append_country_info = function cljs$about$append_country_info() {
-  var seq__10743 = cljs.core.seq.call(null, cljs.about.visited_countries);
-  var chunk__10744 = null;
-  var count__10745 = 0;
-  var i__10746 = 0;
+  var seq__10869 = cljs.core.seq.call(null, cljs.about.visited_countries);
+  var chunk__10870 = null;
+  var count__10871 = 0;
+  var i__10872 = 0;
   while (true) {
-    if (i__10746 < count__10745) {
-      var visit = cljs.core._nth.call(null, chunk__10744, i__10746);
+    if (i__10872 < count__10871) {
+      var visit = cljs.core._nth.call(null, chunk__10870, i__10872);
       cljs.about.append_element.call(null, cljs.about.country_info.call(null, visit), "mapinfo");
-      var G__10747 = seq__10743;
-      var G__10748 = chunk__10744;
-      var G__10749 = count__10745;
-      var G__10750 = i__10746 + 1;
-      seq__10743 = G__10747;
-      chunk__10744 = G__10748;
-      count__10745 = G__10749;
-      i__10746 = G__10750;
+      var G__10873 = seq__10869;
+      var G__10874 = chunk__10870;
+      var G__10875 = count__10871;
+      var G__10876 = i__10872 + 1;
+      seq__10869 = G__10873;
+      chunk__10870 = G__10874;
+      count__10871 = G__10875;
+      i__10872 = G__10876;
       continue;
     } else {
-      var temp__4657__auto__ = cljs.core.seq.call(null, seq__10743);
+      var temp__4657__auto__ = cljs.core.seq.call(null, seq__10869);
       if (temp__4657__auto__) {
-        var seq__10743__$1 = temp__4657__auto__;
-        if (cljs.core.chunked_seq_QMARK_.call(null, seq__10743__$1)) {
-          var c__7357__auto__ = cljs.core.chunk_first.call(null, seq__10743__$1);
-          var G__10751 = cljs.core.chunk_rest.call(null, seq__10743__$1);
-          var G__10752 = c__7357__auto__;
-          var G__10753 = cljs.core.count.call(null, c__7357__auto__);
-          var G__10754 = 0;
-          seq__10743 = G__10751;
-          chunk__10744 = G__10752;
-          count__10745 = G__10753;
-          i__10746 = G__10754;
+        var seq__10869__$1 = temp__4657__auto__;
+        if (cljs.core.chunked_seq_QMARK_.call(null, seq__10869__$1)) {
+          var c__7357__auto__ = cljs.core.chunk_first.call(null, seq__10869__$1);
+          var G__10877 = cljs.core.chunk_rest.call(null, seq__10869__$1);
+          var G__10878 = c__7357__auto__;
+          var G__10879 = cljs.core.count.call(null, c__7357__auto__);
+          var G__10880 = 0;
+          seq__10869 = G__10877;
+          chunk__10870 = G__10878;
+          count__10871 = G__10879;
+          i__10872 = G__10880;
           continue;
         } else {
-          var visit = cljs.core.first.call(null, seq__10743__$1);
+          var visit = cljs.core.first.call(null, seq__10869__$1);
           cljs.about.append_element.call(null, cljs.about.country_info.call(null, visit), "mapinfo");
-          var G__10755 = cljs.core.next.call(null, seq__10743__$1);
-          var G__10756 = null;
-          var G__10757 = 0;
-          var G__10758 = 0;
-          seq__10743 = G__10755;
-          chunk__10744 = G__10756;
-          count__10745 = G__10757;
-          i__10746 = G__10758;
+          var G__10881 = cljs.core.next.call(null, seq__10869__$1);
+          var G__10882 = null;
+          var G__10883 = 0;
+          var G__10884 = 0;
+          seq__10869 = G__10881;
+          chunk__10870 = G__10882;
+          count__10871 = G__10883;
+          i__10872 = G__10884;
           continue;
         }
       } else {
