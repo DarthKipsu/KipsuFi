@@ -6,6 +6,7 @@
                                    :optimizations :whitespace
                                    :pretty-print true}}]}
   :dependencies [[compojure "1.5.1"]
+                 [com.andrewmcveigh/cljs-time "0.4.0"]
                  [hiccup "1.0.5"]
                  [org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.9.293"]
