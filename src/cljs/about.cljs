@@ -112,13 +112,17 @@
 
 (defn- sum-days [visit-a visit-b]
   (+ (days-in-visit visit-a) (days-in-visit visit-b)))
-  
 
 (defn- time-spent [visits]
-  (println visits)
   (let [days (reduce sum-days 0 visits)]
-    (str days " days")))
-
+    (cond (< days 1) "less than a day"
+          (< days 7) (str days " days")
+          (< days 365) (let [weeks (int (/ days 7))
+                             days (mod days 7)]
+                         (str weeks " weeks" (if (not (zero? days)) (str " and " days " days"))))
+          :else (let [years (int (/ days 365))
+                      weeks (/ (mod days 365) 7)]
+                  (str years " years" (if (not (zero? weeks)) (str " and " weeks " weeks")))))))
 
 (defn- stayed-for-text [country]
   (str "Stayed for " (time-spent (get country :visited)) " in total."))
