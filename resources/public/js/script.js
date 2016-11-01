@@ -39547,49 +39547,49 @@ cljs.about.set_visited_class_BANG_ = function cljs$about$set_visited_class_BANG_
   }
 };
 cljs.about.paint_visited_countries_BANG_ = function cljs$about$paint_visited_countries_BANG_() {
-  var seq__10849 = cljs.core.seq.call(null, cljs.about.visited_countries);
-  var chunk__10850 = null;
-  var count__10851 = 0;
-  var i__10852 = 0;
+  var seq__12047 = cljs.core.seq.call(null, cljs.about.visited_countries);
+  var chunk__12048 = null;
+  var count__12049 = 0;
+  var i__12050 = 0;
   while (true) {
-    if (i__10852 < count__10851) {
-      var visit = cljs.core._nth.call(null, chunk__10850, i__10852);
+    if (i__12050 < count__12049) {
+      var visit = cljs.core._nth.call(null, chunk__12048, i__12050);
       cljs.about.set_visited_class_BANG_.call(null, cljs.core.get.call(null, visit, new cljs.core.Keyword(null, "country", "country", 312965309)));
-      var G__10853 = seq__10849;
-      var G__10854 = chunk__10850;
-      var G__10855 = count__10851;
-      var G__10856 = i__10852 + 1;
-      seq__10849 = G__10853;
-      chunk__10850 = G__10854;
-      count__10851 = G__10855;
-      i__10852 = G__10856;
+      var G__12051 = seq__12047;
+      var G__12052 = chunk__12048;
+      var G__12053 = count__12049;
+      var G__12054 = i__12050 + 1;
+      seq__12047 = G__12051;
+      chunk__12048 = G__12052;
+      count__12049 = G__12053;
+      i__12050 = G__12054;
       continue;
     } else {
-      var temp__4657__auto__ = cljs.core.seq.call(null, seq__10849);
+      var temp__4657__auto__ = cljs.core.seq.call(null, seq__12047);
       if (temp__4657__auto__) {
-        var seq__10849__$1 = temp__4657__auto__;
-        if (cljs.core.chunked_seq_QMARK_.call(null, seq__10849__$1)) {
-          var c__7357__auto__ = cljs.core.chunk_first.call(null, seq__10849__$1);
-          var G__10857 = cljs.core.chunk_rest.call(null, seq__10849__$1);
-          var G__10858 = c__7357__auto__;
-          var G__10859 = cljs.core.count.call(null, c__7357__auto__);
-          var G__10860 = 0;
-          seq__10849 = G__10857;
-          chunk__10850 = G__10858;
-          count__10851 = G__10859;
-          i__10852 = G__10860;
+        var seq__12047__$1 = temp__4657__auto__;
+        if (cljs.core.chunked_seq_QMARK_.call(null, seq__12047__$1)) {
+          var c__7357__auto__ = cljs.core.chunk_first.call(null, seq__12047__$1);
+          var G__12055 = cljs.core.chunk_rest.call(null, seq__12047__$1);
+          var G__12056 = c__7357__auto__;
+          var G__12057 = cljs.core.count.call(null, c__7357__auto__);
+          var G__12058 = 0;
+          seq__12047 = G__12055;
+          chunk__12048 = G__12056;
+          count__12049 = G__12057;
+          i__12050 = G__12058;
           continue;
         } else {
-          var visit = cljs.core.first.call(null, seq__10849__$1);
+          var visit = cljs.core.first.call(null, seq__12047__$1);
           cljs.about.set_visited_class_BANG_.call(null, cljs.core.get.call(null, visit, new cljs.core.Keyword(null, "country", "country", 312965309)));
-          var G__10861 = cljs.core.next.call(null, seq__10849__$1);
-          var G__10862 = null;
-          var G__10863 = 0;
-          var G__10864 = 0;
-          seq__10849 = G__10861;
-          chunk__10850 = G__10862;
-          count__10851 = G__10863;
-          i__10852 = G__10864;
+          var G__12059 = cljs.core.next.call(null, seq__12047__$1);
+          var G__12060 = null;
+          var G__12061 = 0;
+          var G__12062 = 0;
+          seq__12047 = G__12059;
+          chunk__12048 = G__12060;
+          count__12049 = G__12061;
+          i__12050 = G__12062;
           continue;
         }
       } else {
@@ -39652,52 +39652,53 @@ cljs.about.country_info = function cljs$about$country_info(country) {
   dommy.core.append_BANG_.call(null, div, stayed_for_text);
   dommy.core.add_class_BANG_.call(null, div, cljs.core.get.call(null, country, new cljs.core.Keyword(null, "country", "country", 312965309)));
   dommy.core.add_class_BANG_.call(null, div, "country-info");
+  dommy.core.add_class_BANG_.call(null, div, "hidden");
   return div;
 };
 cljs.about.append_country_info = function cljs$about$append_country_info() {
-  var seq__10869 = cljs.core.seq.call(null, cljs.about.visited_countries);
-  var chunk__10870 = null;
-  var count__10871 = 0;
-  var i__10872 = 0;
+  var seq__12067 = cljs.core.seq.call(null, cljs.about.visited_countries);
+  var chunk__12068 = null;
+  var count__12069 = 0;
+  var i__12070 = 0;
   while (true) {
-    if (i__10872 < count__10871) {
-      var visit = cljs.core._nth.call(null, chunk__10870, i__10872);
+    if (i__12070 < count__12069) {
+      var visit = cljs.core._nth.call(null, chunk__12068, i__12070);
       cljs.about.append_element.call(null, cljs.about.country_info.call(null, visit), "mapinfo");
-      var G__10873 = seq__10869;
-      var G__10874 = chunk__10870;
-      var G__10875 = count__10871;
-      var G__10876 = i__10872 + 1;
-      seq__10869 = G__10873;
-      chunk__10870 = G__10874;
-      count__10871 = G__10875;
-      i__10872 = G__10876;
+      var G__12071 = seq__12067;
+      var G__12072 = chunk__12068;
+      var G__12073 = count__12069;
+      var G__12074 = i__12070 + 1;
+      seq__12067 = G__12071;
+      chunk__12068 = G__12072;
+      count__12069 = G__12073;
+      i__12070 = G__12074;
       continue;
     } else {
-      var temp__4657__auto__ = cljs.core.seq.call(null, seq__10869);
+      var temp__4657__auto__ = cljs.core.seq.call(null, seq__12067);
       if (temp__4657__auto__) {
-        var seq__10869__$1 = temp__4657__auto__;
-        if (cljs.core.chunked_seq_QMARK_.call(null, seq__10869__$1)) {
-          var c__7357__auto__ = cljs.core.chunk_first.call(null, seq__10869__$1);
-          var G__10877 = cljs.core.chunk_rest.call(null, seq__10869__$1);
-          var G__10878 = c__7357__auto__;
-          var G__10879 = cljs.core.count.call(null, c__7357__auto__);
-          var G__10880 = 0;
-          seq__10869 = G__10877;
-          chunk__10870 = G__10878;
-          count__10871 = G__10879;
-          i__10872 = G__10880;
+        var seq__12067__$1 = temp__4657__auto__;
+        if (cljs.core.chunked_seq_QMARK_.call(null, seq__12067__$1)) {
+          var c__7357__auto__ = cljs.core.chunk_first.call(null, seq__12067__$1);
+          var G__12075 = cljs.core.chunk_rest.call(null, seq__12067__$1);
+          var G__12076 = c__7357__auto__;
+          var G__12077 = cljs.core.count.call(null, c__7357__auto__);
+          var G__12078 = 0;
+          seq__12067 = G__12075;
+          chunk__12068 = G__12076;
+          count__12069 = G__12077;
+          i__12070 = G__12078;
           continue;
         } else {
-          var visit = cljs.core.first.call(null, seq__10869__$1);
+          var visit = cljs.core.first.call(null, seq__12067__$1);
           cljs.about.append_element.call(null, cljs.about.country_info.call(null, visit), "mapinfo");
-          var G__10881 = cljs.core.next.call(null, seq__10869__$1);
-          var G__10882 = null;
-          var G__10883 = 0;
-          var G__10884 = 0;
-          seq__10869 = G__10881;
-          chunk__10870 = G__10882;
-          count__10871 = G__10883;
-          i__10872 = G__10884;
+          var G__12079 = cljs.core.next.call(null, seq__12067__$1);
+          var G__12080 = null;
+          var G__12081 = 0;
+          var G__12082 = 0;
+          seq__12067 = G__12079;
+          chunk__12068 = G__12080;
+          count__12069 = G__12081;
+          i__12070 = G__12082;
           continue;
         }
       } else {
@@ -39707,6 +39708,83 @@ cljs.about.append_country_info = function cljs$about$append_country_info() {
     break;
   }
 };
-cljs.core.println.call(null, dommy.core.create_element.call(null, "div"));
+cljs.about.mouse_over = function cljs$about$mouse_over(coutry_id) {
+  return function() {
+    var element = cljs.about.element_by_class.call(null, coutry_id);
+    return dommy.core.remove_class_BANG_.call(null, element, new cljs.core.Keyword(null, "hidden", "hidden", -312506092));
+  };
+};
+cljs.about.mouse_leave = function cljs$about$mouse_leave(coutry_id) {
+  return function() {
+    var element = cljs.about.element_by_class.call(null, coutry_id);
+    return dommy.core.add_class_BANG_.call(null, element, new cljs.core.Keyword(null, "hidden", "hidden", -312506092));
+  };
+};
+cljs.about.add_country_hover_listeners = function cljs$about$add_country_hover_listeners() {
+  var seq__12087 = cljs.core.seq.call(null, cljs.about.visited_countries);
+  var chunk__12088 = null;
+  var count__12089 = 0;
+  var i__12090 = 0;
+  while (true) {
+    if (i__12090 < count__12089) {
+      var visit = cljs.core._nth.call(null, chunk__12088, i__12090);
+      var country_12091 = cljs.core.get.call(null, visit, new cljs.core.Keyword(null, "country", "country", 312965309));
+      var element_12092 = cljs.about.element_by_id.call(null, country_12091);
+      if (cljs.core.some_QMARK_.call(null, element_12092)) {
+        dommy.core.listen_BANG_.call(null, element_12092, new cljs.core.Keyword(null, "mouseover", "mouseover", -484272303), cljs.about.mouse_over.call(null, country_12091));
+        dommy.core.listen_BANG_.call(null, element_12092, new cljs.core.Keyword(null, "mouseleave", "mouseleave", 531566580), cljs.about.mouse_leave.call(null, country_12091));
+      } else {
+      }
+      var G__12093 = seq__12087;
+      var G__12094 = chunk__12088;
+      var G__12095 = count__12089;
+      var G__12096 = i__12090 + 1;
+      seq__12087 = G__12093;
+      chunk__12088 = G__12094;
+      count__12089 = G__12095;
+      i__12090 = G__12096;
+      continue;
+    } else {
+      var temp__4657__auto__ = cljs.core.seq.call(null, seq__12087);
+      if (temp__4657__auto__) {
+        var seq__12087__$1 = temp__4657__auto__;
+        if (cljs.core.chunked_seq_QMARK_.call(null, seq__12087__$1)) {
+          var c__7357__auto__ = cljs.core.chunk_first.call(null, seq__12087__$1);
+          var G__12097 = cljs.core.chunk_rest.call(null, seq__12087__$1);
+          var G__12098 = c__7357__auto__;
+          var G__12099 = cljs.core.count.call(null, c__7357__auto__);
+          var G__12100 = 0;
+          seq__12087 = G__12097;
+          chunk__12088 = G__12098;
+          count__12089 = G__12099;
+          i__12090 = G__12100;
+          continue;
+        } else {
+          var visit = cljs.core.first.call(null, seq__12087__$1);
+          var country_12101 = cljs.core.get.call(null, visit, new cljs.core.Keyword(null, "country", "country", 312965309));
+          var element_12102 = cljs.about.element_by_id.call(null, country_12101);
+          if (cljs.core.some_QMARK_.call(null, element_12102)) {
+            dommy.core.listen_BANG_.call(null, element_12102, new cljs.core.Keyword(null, "mouseover", "mouseover", -484272303), cljs.about.mouse_over.call(null, country_12101));
+            dommy.core.listen_BANG_.call(null, element_12102, new cljs.core.Keyword(null, "mouseleave", "mouseleave", 531566580), cljs.about.mouse_leave.call(null, country_12101));
+          } else {
+          }
+          var G__12103 = cljs.core.next.call(null, seq__12087__$1);
+          var G__12104 = null;
+          var G__12105 = 0;
+          var G__12106 = 0;
+          seq__12087 = G__12103;
+          chunk__12088 = G__12104;
+          count__12089 = G__12105;
+          i__12090 = G__12106;
+          continue;
+        }
+      } else {
+        return null;
+      }
+    }
+    break;
+  }
+};
 cljs.about.paint_visited_countries_BANG_.call(null);
 cljs.about.append_country_info.call(null);
+cljs.about.add_country_hover_listeners.call(null);

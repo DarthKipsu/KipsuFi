@@ -42,6 +42,12 @@
 .about-page .countries {
   background-color: #f2f2ff;
 }
+.about-page .countries .mapinfo .country-info {
+  height: 0;
+}
+.about-page .countries .mapinfo .country-info .hidden {
+  display: none;
+}
 .about-page .countries .title {
   color: #6daeba;
 }

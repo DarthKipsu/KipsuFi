@@ -1,5 +1,11 @@
 (ns cljs.about
-  (:use [dommy.core :only [add-class! append! create-element create-text-node sel1]]
+  (:use [dommy.core :only [add-class!
+                           append! 
+                           create-element 
+                           create-text-node 
+                           listen! 
+                           remove-class! 
+                           sel1]]
         [cljs-time.core :only [date-time in-days interval now]]))
 
 (enable-console-print!)
@@ -132,18 +138,34 @@
         br (create-element "br")
         country-text (create-text-node (country-text country))
         stayed-for-text (create-text-node (stayed-for-text country))]
-    (append! div country-text)
+    (append! div country-text)  
     (append! div br)
     (append! div stayed-for-text)
     (add-class! div (get country :country))
     (add-class! div "country-info")
+    (add-class! div "hidden")
     div))
 
 (defn- append-country-info []
   (doseq [visit visited-countries] (append-element (country-info visit) "mapinfo")))
 
-(println (create-element "div"))
+(defn- mouse-over [coutry-id]
+  (fn [] (let [element (element-by-class coutry-id)]
+           (remove-class! element :hidden))))
+
+(defn- mouse-leave [coutry-id]
+  (fn [] (let [element (element-by-class coutry-id)]
+           (add-class! element :hidden))))
+
+(defn- add-country-hover-listeners []
+  (doseq [visit visited-countries]
+    (let [country (get visit :country)
+          element (element-by-id country)]
+      (if (some? element) 
+        (do (listen! element :mouseover (mouse-over country))
+          (listen! element :mouseleave (mouse-leave country)))))))
 
 (paint-visited-countries!)
 (append-country-info)
+(add-country-hover-listeners)
 
