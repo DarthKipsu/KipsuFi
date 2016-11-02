@@ -6,6 +6,8 @@
 /lib
 /classes
 /checkouts
+/resources/public/js
+/resources/public/css
 ohjeet
 pom.xml
 pom.xml.asc
