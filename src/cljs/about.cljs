@@ -127,7 +127,7 @@
                              days (mod days 7)]
                          (str weeks " weeks" (if (not (zero? days)) (str " and " days " days"))))
           :else (let [years (int (/ days 365))
-                      weeks (/ (mod days 365) 7)]
+                      weeks (int (/ (mod days 365) 7))]
                   (str years " years" (if (not (zero? weeks)) (str " and " weeks " weeks")))))))
 
 (defn- stayed-for-text [country]
