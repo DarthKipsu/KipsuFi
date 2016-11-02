@@ -42,7 +42,15 @@
 .about-page .countries {
   background-color: #f2f2ff;
 }
+.about-page .countries .container {
+  padding: 0;
+  width: 100%;
+}
+.about-page .countries .mapinfo {
+  height: 8vmin;
+}
 .about-page .countries .mapinfo .country-info {
+  font-size: 2.7vmin;
   height: 0;
 }
 .about-page .countries .mapinfo .country-info .hidden {
@@ -116,7 +124,19 @@
 @media (min-width: 400px) and (min-height: 200px) and (orientation: landscape) {
   .about-page p,
   .about-page .td {
-    font-size: 3vmin;
+    font-size: 2.9vmin;
+  }
+  .about-page .countries .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .about-page .countries .container .title {
+    vertical-align: top;
+    padding-right: 2vmin;
+  }
+  .about-page .countries .container .mapinfo {
+    height: 0;
+    z-index: 10;
   }
   .about-page .table {
     margin-left: 5vmin;
@@ -152,6 +172,7 @@
   .about-page .world {
     margin: 0 10vmin;
     max-height: 80vh;
+    z-index: 1;
   }
 }
 .main-page {

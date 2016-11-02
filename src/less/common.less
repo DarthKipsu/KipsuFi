@@ -65,8 +65,15 @@
   .countries {
     background-color: #f2f2ff;
 
+    .container {
+      padding: 0;
+      width: 100%;
+    }
+
     .mapinfo {
+      height: 8vmin;
       .country-info {
+        font-size: 2.7vmin;
         height: 0;
 
         & .hidden {
@@ -159,7 +166,24 @@
   @media (min-width: 400px) and (min-height: 200px) and (orientation: landscape) {
 
     p, .td {
-      font-size: 3vmin;
+      font-size: 2.9vmin;
+    }
+
+    .countries {
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        .title {
+          vertical-align: top;
+          padding-right: 2vmin;
+        }
+
+        .mapinfo {
+          height: 0;
+          z-index: 10;
+        }
+      }
+
     }
 
     .table {
@@ -207,6 +231,7 @@
     .world {
       margin: 0 10vmin;
       max-height: 80vh;
+      z-index: 1;
     }
   }
 }

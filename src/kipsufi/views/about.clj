@@ -63,6 +63,7 @@
       [:div.td "Helsinki, Finland"]]]]
 
    [:section.countries
-    [:div.title "Places I've visited"]
-    [:div.mapinfo]
+    [:div.container
+     [:div.title "Places I've visited"]
+     [:div.mapinfo]]
     (svg/world-map)]])
