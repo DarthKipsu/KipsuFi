@@ -4,7 +4,8 @@
 (def options {:full-page? false
               :next-page "/photos"
               :prev-page "/"
-              :title ":: About Me"})
+              :title ":: About Me"
+              :css "about"})
 
 (defn content []
   [:div.about-page

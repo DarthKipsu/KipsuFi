@@ -1,0 +1,180 @@
+.about-page {
+
+  .bits {
+    background-color: #e3e3e3;
+  }
+
+  .countries {
+    background-color: #f2f2ff;
+
+    .container {
+      padding: 0;
+      width: 100%;
+    }
+
+    .mapinfo {
+      height: 8vmin;
+      .country-info {
+        font-size: 2.7vmin;
+        height: 0;
+
+        & .hidden {
+          display: none;
+        }
+      }
+    }
+
+    .title {
+      color: #6daeba;
+    }
+  }
+
+  .title { 
+    color: #aaa;
+    font-size: 8vmin;
+  }
+
+  .subtitle {
+    color: #666;
+    font-size: 4vmin;
+    font-weight: 600;
+    margin-top: 5vmin;
+  }
+
+  .table {
+    display: table;
+    margin-top: 5vmin;
+
+    .space {
+      padding: 2vmin;
+    }
+
+    .tr {
+      display: table-row;
+      
+      .td {
+        display: table-cell;
+
+        &:nth-child(1) {
+          width: 30vw;
+        }
+      }
+    }
+  }
+
+  .world {
+    fill: #bfbfbf;
+    max-height: 90vh;
+    max-width: 100vw;
+
+    .visited {
+      fill: #06600b;
+
+      &:hover {
+        fill: #098767;
+      }
+    }
+  }
+
+  @media (min-width: 0) {
+    width: 100%;
+
+    p, .td {
+      color: #666;
+      font-size: 4vmin;
+    }
+
+    section {
+      padding: 8vh 5vh;
+    }
+
+    section.intro {
+      width: 100%;
+    }
+
+    img {
+      max-width: 90%;
+
+      &:nth-child(1) {
+        display: none;
+      }
+
+      &:nth-child(2n) {
+        display: block;
+      }
+    }
+  }
+
+  @media (min-width: 400px) and (min-height: 200px) and (orientation: landscape) {
+
+    p, .td {
+      font-size: 2.9vmin;
+    }
+
+    .countries {
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        .title {
+          vertical-align: top;
+          padding-right: 2vmin;
+        }
+
+        .mapinfo {
+          height: 0;
+          z-index: 10;
+        }
+      }
+
+    }
+
+    .table {
+      margin-left: 5vmin;
+
+      .tr  .td:nth-child(1) {
+        width: 20vw;
+      }
+    }
+
+    section {
+      height: 100vh;
+      padding: 6vh 10vw;
+    }
+
+    section.intro {
+
+      img {
+        border: 1px solid #aaa;
+        float: right;
+        margin: 8px;
+        max-height: 100vh;
+        max-width: 40%;
+        padding: 8px;
+        transform: rotate(3deg);
+
+        &:nth-child(1) {
+          display: block;
+        }
+
+        &:nth-child(2n) {
+          display: none;
+        }
+      }
+
+      p {
+        padding: 0 5%;
+      }
+
+      .title {
+        margin: 3vmin;
+      }
+    }
+
+    .world {
+      margin: 0 10vmin;
+      max-height: 80vh;
+      z-index: 1;
+    }
+  }
+}
+

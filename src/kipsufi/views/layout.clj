@@ -16,7 +16,8 @@
      [:meta {:charset "utf-8"}]
      [:title (str "darth.kipsu.fi " (:title options))]
      (h/include-css "//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
-     (h/include-css "/css/common.css")]
+     (h/include-css "/css/common.css")
+     (h/include-css (str "/css/" (:css options) ".css"))]
     [:body
      [:section {:class (str "content " (if (:full-page? options) "full" "frame"))}
       content 

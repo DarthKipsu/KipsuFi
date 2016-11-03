@@ -3,7 +3,8 @@
 (def options {:full-page? true 
               :next-page "/about"
               :prev-page "/photos"
-              :title ""})
+              :title ""
+              :css "main"})
 
 (defn content []
   [:div.main-page
