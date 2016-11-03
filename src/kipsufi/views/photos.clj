@@ -1,5 +1,5 @@
 (ns kipsufi.views.photos
-  (:require [kipsufi.svg.world :as svg]))
+  (:require [kipsufi.svg.europe :as svg]))
 
 (def options {:full-page? false
               :next-page "/"
@@ -7,4 +7,5 @@
               :title ":: Photography"})
 
 (defn content []
-  [:div.photos-page])
+  [:div.photos-page
+   (svg/europe-map)])
