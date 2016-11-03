@@ -4,6 +4,7 @@
             [kipsufi.views.layout :as layout]
             [kipsufi.views.main :as main]
             [kipsufi.views.about :as about]
+            [kipsufi.views.photos :as photos]
             [ring.adapter.jetty :as jetty]
             [ring.middleware.defaults :refer [wrap-defaults site-defaults]])
   (:gen-class))
@@ -12,6 +13,7 @@
   (HEAD "/" [] "")
   (GET "/" [] (layout/common-wrapper (main/content) main/options))
   (GET "/about" [] (layout/common-wrapper (about/content) about/options))
+  (GET "/photos" [] (layout/common-wrapper (photos/content) photos/options))
   (route/not-found "Not Found"))
 
 (def app

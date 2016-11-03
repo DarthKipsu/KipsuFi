@@ -2,7 +2,7 @@
 
 (def options {:full-page? true 
               :next-page "/about"
-              :prev-page "/about"
+              :prev-page "/photos"
               :title ""})
 
 (defn content []
