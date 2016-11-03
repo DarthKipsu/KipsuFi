@@ -165,7 +165,9 @@
         (do (listen! element :mouseover (mouse-over country))
           (listen! element :mouseleave (mouse-leave country)))))))
 
-(paint-visited-countries!)
-(append-country-info)
-(add-country-hover-listeners)
+(if (not (nil? (element-by-class "about-page")))
+  (do 
+    (paint-visited-countries!)
+    (append-country-info)
+    (add-country-hover-listeners)))
 
