@@ -1,8 +1,7 @@
 (ns kipsufi.views.main)
 
 (def options {:full-page? true 
-              :next-page "/about"
-              :prev-page "/photos"
+              :key :main
               :title ""
               :css "main"})
 

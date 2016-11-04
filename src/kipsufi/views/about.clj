@@ -2,8 +2,7 @@
   (:require [kipsufi.svg.world :as svg]))
 
 (def options {:full-page? false
-              :next-page "/photos"
-              :prev-page "/"
+              :key :about
               :title ":: About Me"
               :css "about"})
 

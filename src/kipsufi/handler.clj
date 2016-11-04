@@ -9,11 +9,16 @@
             [ring.middleware.defaults :refer [wrap-defaults site-defaults]])
   (:gen-class))
 
+(def pages
+  [{:href "/" :title "Main page" :key :main}
+   {:href "/about" :title "About me" :key :about}
+   {:href "/photos" :title "Photography" :key :photos}])
+
 (defroutes app-routes
   (HEAD "/" [] "")
-  (GET "/" [] (layout/common-wrapper (main/content) main/options))
-  (GET "/about" [] (layout/common-wrapper (about/content) about/options))
-  (GET "/photos" [] (layout/common-wrapper (photos/content) photos/options))
+  (GET "/" [] (layout/common-wrapper (main/content) main/options pages))
+  (GET "/about" [] (layout/common-wrapper (about/content) about/options pages))
+  (GET "/photos" [] (layout/common-wrapper (photos/content) photos/options pages))
   (route/not-found "Not Found"))
 
 (def app
