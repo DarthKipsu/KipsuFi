@@ -10,6 +10,7 @@
   (:gen-class))
 
 (def pages
+  "A list of pages displayed with the navigation arrows on the sides of the page."
   [{:href "/" :title "Main page" :key :main}
    {:href "/about" :title "About me" :key :about}
    {:href "/photos" :title "Photography" :key :photos}])
