@@ -8,4 +8,5 @@
 
 (defn content []
   [:div.photos-page
+   [:h1.title "Photography"]
    (svg/europe-map)])
