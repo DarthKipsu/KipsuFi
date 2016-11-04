@@ -19,7 +19,7 @@
   "Rotates the items in the given sequence so they are in opposite order."
   (reduce #(conj %1 %2) '() a-seq))
 
-(defn ^:private next-arrow [direction href title]
+(defn ^:private arrow [direction href title]
   "Returns a hiccup component representing a navigation arrow."
   [:a {:href href
        :title title}
