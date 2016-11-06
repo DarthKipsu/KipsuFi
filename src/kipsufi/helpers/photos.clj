@@ -38,7 +38,8 @@
     {:id id
      :title gallery
      :cx (first coord)
-     :cy (second coord)}))
+     :cy (second coord)
+     :r (nth coord 2)}))
 
 (defn ^:private directories
   "Returns a list of immediate child directories for a given path."

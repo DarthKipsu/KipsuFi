@@ -222,7 +222,7 @@
           :xlink:title (:title gallery)}
       [:circle {:cx (:cx gallery)
                 :cy (:cy gallery)
-                :r "1"}]])
+                :r (:r gallery)}]])
 
 (defn europe-map [photographed]
   (let [countries-with-links

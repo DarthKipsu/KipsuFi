@@ -4,8 +4,9 @@
 
 (defn ^:private page-index [pages page-key]
   "Returns the index of the current page in the pages list, based on the page :key option."
-  (let [page-keys (map (fn [item] (get item :key)) pages)]
-    (.indexOf page-keys page-key)))
+  (let [page-keys (map (fn [item] (get item :key)) pages)
+        current-index (.indexOf page-keys page-key)]
+    (if (neg? current-index) 0 current-index)))
 
 (defn ^:private next-pages [pages current-index]
   "Returns a sequence containing all the pages in order following the given page index, not

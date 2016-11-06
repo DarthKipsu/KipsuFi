@@ -6,6 +6,7 @@
             [kipsufi.views.about :as about]
             [kipsufi.views.photos :as photos]
             [kipsufi.views.country :as photo-country]
+            [kipsufi.views.gallery :as photo-gallery]
             [ring.adapter.jetty :as jetty]
             [ring.middleware.defaults :refer [wrap-defaults site-defaults]])
   (:gen-class))
@@ -16,12 +17,27 @@
    {:href "/about" :title "About me" :key :about}
    {:href "/photos" :title "Photography" :key :photos}])
 
+(defn ^:private gallery-back
+  "Allows arrows to be used as back buttons for a gallery"
+  [url title a-key]
+  [{:key :this}
+   {:href url :title title :key a-key}])
+
 (defroutes app-routes
   (HEAD "/" [] "")
   (GET "/" [] (layout/common-wrapper (main/content) main/options pages))
   (GET "/about" [] (layout/common-wrapper (about/content) about/options pages))
   (GET "/photos" [] (layout/common-wrapper (photos/content) photos/options pages))
-  (GET "/photos/:country" [country] (layout/common-wrapper (photo-country/content country) photo-country/options pages))
+  (GET "/photos/:country" [country]
+       (layout/common-wrapper 
+         (photo-country/content country)
+         photo-country/options
+         (gallery-back "/photos" "Photography" :photos)))
+  (GET "/photos/:country/:gallery" [country gallery]
+       (layout/common-wrapper
+         (photo-gallery/content gallery) 
+         photo-gallery/options
+         (gallery-back (str "/photos/" country) country :country)))
   (route/not-found "Not Found"))
 
 (def app
