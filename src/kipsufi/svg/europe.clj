@@ -210,14 +210,19 @@
             :class "land"
             :d "M480.487,331.376L480.41,331.401L480.152,331.556L480.005,331.61L479.871,331.637L479.766,331.626L479.708,331.535L479.714,331.396L479.69,331.272L479.67,331.205L479.708,331.024L479.794,330.927L479.913,330.847L480.101,330.876L480.499,330.992L480.582,331.101L480.583,331.173L480.51,331.292z"}])
 
-(defn ^:private add-link-if-needed2! [photographed array item]
+(defn ^:private add-link-if-needed [photographed array item]
   (if (contains? photographed (get item :id))
-     (conj array [:path (assoc item :class "land visited")])
+     (conj array [:a {:href "#" 
+                      :title (get item :title)
+                      :onClick (str "window.location=window.location + '/" 
+                                    (:id item) 
+                                    "'; return false;")}
+                  [:path (assoc item :class "land visited")]])
      (conj array [:path item])))
 
 (defn europe-map [photographed]
   (let [countries-with-links
-        (reduce (partial add-link-if-needed2! photographed) [] (country-paths))]
+        (reduce (partial add-link-if-needed photographed) [] (country-paths))]
   [:svg.europe {:xmlns "http://www.w3.org/2000/svg" 
          :xmlns:xlink "http://www.w3.org/1999/xlink"
          :viewBox "400 150 250 220"}
