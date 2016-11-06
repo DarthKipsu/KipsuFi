@@ -217,6 +217,13 @@
                   [:path (assoc item :class "land visited")]])
      (conj array [:path item])))
 
+(defn ^:private gallery-links [country gallery]
+     [:a {:xlink:href (str "/photos/" country "/" (:id gallery))
+          :xlink:title (:title gallery)}
+      [:circle {:cx (:cx gallery)
+                :cy (:cy gallery)
+                :r "1"}]])
+
 (defn europe-map [photographed]
   (let [countries-with-links
         (reduce (partial add-link-if-needed photographed) [] (country-paths))]
@@ -225,9 +232,10 @@
                 :viewBox "400 150 250 220"}
    (reduce conj [:g] countries-with-links)]))
 
-(defn country-map [country]
-  [:svg {:xmlns "http://www.w3.org/2000/svg" 
-         :xmlns:xlink "http://www.w3.org/1999/xlink"
-         :class country
-         :viewBox "400 150 250 220"}
-   [:path (first (filter (fn [item] () (= (get item :title) country)) (country-paths)))]])
+(defn country-map [country galleries]
+    [:svg {:xmlns "http://www.w3.org/2000/svg" 
+           :xmlns:xlink "http://www.w3.org/1999/xlink"
+           :class country
+           :viewBox "400 150 250 220"}
+     [:path (first (filter (fn [item] () (= (get item :title) country)) (country-paths)))]
+     (reduce conj [:g] (map (partial gallery-links country) galleries))])

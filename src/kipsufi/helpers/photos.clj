@@ -38,8 +38,7 @@
     {:id id
      :title gallery
      :cx (first coord)
-     :cy (second coord)
-     :r "0.2"}))
+     :cy (second coord)}))
 
 (defn ^:private directories
   "Returns a list of immediate child directories for a given path."
@@ -59,5 +58,5 @@
   [country]
   (let [directory-list (directories photo-dir)
         galleries (filter (fn [gallery] (= country (gallery-country gallery))) directory-list)
-        gallery-attributes (into [] (map svg-circle directory-list))]
+        gallery-attributes (into [] (map svg-circle galleries))]
     gallery-attributes))

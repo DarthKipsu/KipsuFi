@@ -9,7 +9,6 @@
 
 (defn content [country]
   (let [galleries (ph/galleries-for country)]
-    (println galleries)
     [:div.photos-country-page
      [:h1.title country]
-     (svg/country-map country)]))
+     (svg/country-map country galleries)]))
