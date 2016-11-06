@@ -1,5 +1,6 @@
 (ns kipsufi.views.photos
   (:require [clojure.java.io :as io]
+            [kipsufi.helpers.photos :as ph]
             [kipsufi.svg.europe :as svg])
   (:import java.io.File))
 
@@ -42,8 +43,7 @@
   (reduce (fn [a-set dir] (conj a-set (read-file photo-dir dir "country"))) #{} directories))
 
 (defn content []
-  (let [directories (read-directories photo-dir)
-        countries (list-countries directories)]
+  (let [countries (ph/country-list)]
   [:div.photos-page
    [:h1.title "Photography"]
    (svg/europe-map countries)]))
