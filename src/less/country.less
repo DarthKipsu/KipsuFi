@@ -1,0 +1,36 @@
+.photos-country-page {
+
+  .title {
+    color: #aaa;
+    font-size: 8vmin;
+    height: 0;
+    padding: 10vh 10vw;
+    width: 80vw;
+  }
+
+  @media (min-width: 0) {
+
+    svg {
+      fill: #b5bcb5;
+      margin: 20vh 5vw 10vh;
+      max-width: 90vw;
+      max-height: 70vh;
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  @media (min-width: 400px) and (min-height: 200px) and (orientation: landscape) {
+
+    .title {
+      padding: 5vh 10vw;
+    }
+
+    svg {
+      margin: 2vh 15vw;
+      max-width: 70vw;
+      max-height: 95vh;
+    }
+  }
+}
+

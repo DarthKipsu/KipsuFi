@@ -6,7 +6,7 @@
 (def options {:full-page? false
               :key :country
               :title ":: Photography"
-              :css "photos"})
+              :css "country"})
 
 (defn content [country]
   (let []
