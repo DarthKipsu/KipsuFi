@@ -212,11 +212,8 @@
 
 (defn ^:private add-link-if-needed [photographed array item]
   (if (contains? photographed (get item :id))
-     (conj array [:a {:href "#" 
-                      :title (get item :title)
-                      :onClick (str "window.location=window.location + '/" 
-                                    (:id item) 
-                                    "'; return false;")}
+     (conj array [:a {:xlink:href (str "/photos/" (:id item)) 
+                      :title (get item :title)}
                   [:path (assoc item :class "land visited")]])
      (conj array [:path item])))
 

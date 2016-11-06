@@ -20,6 +20,7 @@
   (GET "/" [] (layout/common-wrapper (main/content) main/options pages))
   (GET "/about" [] (layout/common-wrapper (about/content) about/options pages))
   (GET "/photos" [] (layout/common-wrapper (photos/content) photos/options pages))
+  (GET "/photos/:country" [country] (layout/common-wrapper (photos/content) photos/options pages))
   (route/not-found "Not Found"))
 
 (def app
