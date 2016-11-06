@@ -3,6 +3,8 @@
             [clojure.string :as str])
   (:import java.io.File))
 
+; PRIVATE
+
 (def photo-dir "clj/images/photography/")
 
 (defn ^:private child-dirs-for
@@ -13,9 +15,9 @@
     (filter children (.listFiles directory))))
 
 (defn without-newline [string]
-    (if (.endsWith string "\n")
-          (.substring string 0 (dec (count string)))
-          string))
+  (if (.endsWith string "\n")
+    (.substring string 0 (dec (count string)))
+    string))
 
 (defn ^:private read-file
   "Reads the contents of a file with the given name, folder and parent path."
@@ -47,6 +49,25 @@
   (let [directory (io/file path)]
     (map (fn [file] (.getName file)) (child-dirs-for directory))))
 
+(defn read-photos
+  "Reads a list of photos in a given directory"
+  [directory]
+  (filter (fn [file] (or (.endsWith (.getName file) ".jpg")
+                         (.endsWith (.getName file) ".png")))
+          (.listFiles directory)))
+
+(defn photo-object
+  [directory gallery photo]
+  (let [photo-name (.getName photo)
+        id (.substring photo-name 5 (- (count photo-name) 4))]
+    {:url (str directory gallery "/" photo-name)
+     :thumb (str directory gallery "/thumbs/" photo-name)
+     :id (Integer/parseInt id)
+     :gallery gallery
+     :description (read-file directory gallery (str "photo" id))}))
+
+; PUBLIC
+
 (defn country-list 
   "Returns a set of country id's with photographs."
   []
@@ -61,3 +82,10 @@
         galleries (filter (fn [gallery] (= country (gallery-country gallery))) directory-list)
         gallery-attributes (into [] (map svg-circle galleries))]
     gallery-attributes))
+
+(defn photos
+  "Returns a list of photos belongin to given gallery."
+  [gallery]
+  (let [photos (read-photos (io/file photo-dir gallery))]
+    (println (.substring photo-dir 3 (count photo-dir)))
+    (sort-by :id (map (partial photo-object (str (.substring photo-dir 3 (count photo-dir))) gallery) photos))))
