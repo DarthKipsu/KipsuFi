@@ -14,7 +14,6 @@
 
 (defn- ^:private svg-view-box []
   (let [svg (sel1 "svg")
-        j (print svg)
         bbox (.getBBox svg)
         viewBox (str (.-x bbox) " " (.-y bbox) " " (.-width bbox) " " (.-height bbox))]
     (.setAttribute svg "viewBox" viewBox)))
