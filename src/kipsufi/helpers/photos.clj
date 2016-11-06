@@ -87,5 +87,4 @@
   "Returns a list of photos belongin to given gallery."
   [gallery]
   (let [photos (read-photos (io/file photo-dir gallery))]
-    (println (.substring photo-dir 3 (count photo-dir)))
     (sort-by :id (map (partial photo-object (str (.substring photo-dir 3 (count photo-dir))) gallery) photos))))
