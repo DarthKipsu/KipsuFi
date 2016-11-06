@@ -1,7 +1,6 @@
 (ns kipsufi.views.country
-  (:require [clojure.java.io :as io]
-            [kipsufi.svg.europe :as svg])
-  (:import java.io.File))
+  (:require [kipsufi.helpers.photos :as ph]
+            [kipsufi.svg.europe :as svg]))
 
 (def options {:full-page? false
               :key :country
@@ -9,7 +8,8 @@
               :css "country"})
 
 (defn content [country]
-  (let []
-  [:div.photos-country-page
-   [:h1.title country]
-   (svg/country-map country)]))
+  (let [galleries (ph/galleries-for country)]
+    (println galleries)
+    [:div.photos-country-page
+     [:h1.title country]
+     (svg/country-map country)]))

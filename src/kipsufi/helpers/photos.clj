@@ -24,6 +24,11 @@
       (slurp (str path folder "/" file)))
     (catch Exception e "")))
 
+(defn ^:private gallery-country
+  "Reads the country attribute of an individual gallery"
+  [gallery]
+  (read-file photo-dir gallery "country"))
+
 (defn ^:private directories
   "Returns a list of immediate child directories for a given path."
   [path]
@@ -33,6 +38,12 @@
 (defn country-list 
   "Returns a set of country id's with photographs."
   []
-  (reduce (fn [a-set dir] (conj a-set (read-file photo-dir dir "country")))
+  (reduce (fn [a-set dir] (conj a-set (gallery-country dir)))
           #{} 
           (directories photo-dir)))
+
+(defn galleries-for
+  "Returns gallery info for a country"
+  [country]
+  (let [directory-list (directories photo-dir)]
+    (filter (fn [gallery] (= country (gallery-country gallery))) directory-list)))
