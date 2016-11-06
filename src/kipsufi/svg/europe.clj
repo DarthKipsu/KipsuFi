@@ -212,7 +212,7 @@
 
 (defn ^:private add-link-if-needed [photographed array item]
   (if (contains? photographed (get item :id))
-     (conj array [:a {:xlink:href (str "/photos/" (:id item)) 
+     (conj array [:a {:xlink:href (str "/photos/" (:title item)) 
                       :xlink:title (get item :title)}
                   [:path (assoc item :class "land visited")]])
      (conj array [:path item])))
@@ -221,6 +221,13 @@
   (let [countries-with-links
         (reduce (partial add-link-if-needed photographed) [] (country-paths))]
   [:svg.europe {:xmlns "http://www.w3.org/2000/svg" 
-         :xmlns:xlink "http://www.w3.org/1999/xlink"
-         :viewBox "400 150 250 220"}
+                :xmlns:xlink "http://www.w3.org/1999/xlink"
+                :viewBox "400 150 250 220"}
    (reduce conj [:g] countries-with-links)]))
+
+(defn country-map [country]
+  [:svg {:xmlns "http://www.w3.org/2000/svg" 
+         :xmlns:xlink "http://www.w3.org/1999/xlink"
+         :class country
+         :viewBox "400 150 250 220"}
+   [:path (first (filter (fn [item] () (= (get item :title) country)) (country-paths)))]])

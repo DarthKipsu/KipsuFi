@@ -5,6 +5,7 @@
             [kipsufi.views.main :as main]
             [kipsufi.views.about :as about]
             [kipsufi.views.photos :as photos]
+            [kipsufi.views.country :as photo-country]
             [ring.adapter.jetty :as jetty]
             [ring.middleware.defaults :refer [wrap-defaults site-defaults]])
   (:gen-class))
@@ -20,7 +21,7 @@
   (GET "/" [] (layout/common-wrapper (main/content) main/options pages))
   (GET "/about" [] (layout/common-wrapper (about/content) about/options pages))
   (GET "/photos" [] (layout/common-wrapper (photos/content) photos/options pages))
-  (GET "/photos/:country" [country] (layout/common-wrapper (photos/content) photos/options pages))
+  (GET "/photos/:country" [country] (layout/common-wrapper (photo-country/content country) photo-country/options pages))
   (route/not-found "Not Found"))
 
 (def app

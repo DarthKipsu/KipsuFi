@@ -97,7 +97,7 @@
 
 (defn- element-by-class [selector]
   (sel1 (keyword (str "." selector))))
-
+"Photography"
 (defn- set-visited-class! [country] 
   (let [element (element-by-id country)]
     (if (some? element) (add-class! element :visited))))
