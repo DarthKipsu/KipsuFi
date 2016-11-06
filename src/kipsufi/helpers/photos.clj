@@ -1,5 +1,6 @@
 (ns kipsufi.helpers.photos
-  (:require [clojure.java.io :as io])
+  (:require [clojure.java.io :as io]
+            [clojure.string :as str])
   (:import java.io.File))
 
 (def photo-dir "clj/images/photography/")
@@ -29,6 +30,17 @@
   [gallery]
   (read-file photo-dir gallery "country"))
 
+(defn ^:private svg-circle
+  "Creates svg circle attriutes for a given gallery."
+  [gallery]
+  (let [id (str/replace gallery #" " "")
+        coord (str/split (read-file photo-dir gallery "coord") #" ")]
+    {:id id
+     :title gallery
+     :cx (first coord)
+     :cy (second coord)
+     :r "0.2"}))
+
 (defn ^:private directories
   "Returns a list of immediate child directories for a given path."
   [path]
@@ -45,5 +57,7 @@
 (defn galleries-for
   "Returns gallery info for a country"
   [country]
-  (let [directory-list (directories photo-dir)]
-    (filter (fn [gallery] (= country (gallery-country gallery))) directory-list)))
+  (let [directory-list (directories photo-dir)
+        galleries (filter (fn [gallery] (= country (gallery-country gallery))) directory-list)
+        gallery-attributes (into [] (map svg-circle directory-list))]
+    gallery-attributes))
