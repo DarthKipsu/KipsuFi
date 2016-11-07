@@ -14,17 +14,29 @@
     (.-matches (.matchMedia js/window has-thumbnails))
     false))
 
-(defn- display-id []
+(defn- display-id-from-pathname []
   (let [id (get (str/split js/window.location.pathname "/") 4)]
     (if id id "1")))
 
+(def displaying (atom (display-id-from-pathname)))
+
+(defn- photo-by-order [order]
+  (first (filter (fn [item] (= order (dom/attr item :data-order)))
+                   (dom/sel :.gallery-photo))))
+
 (defn- display-photo! [id]
-  (.log js/console id)
-  (.log js/console (dom/sel :.gallery-photo))
-  (let [photo (first (filter (fn [item] (= id (dom/attr item :data-order))) (dom/sel :.gallery-photo)))]
-    (.log js/console photo)
-    (dom/remove-class! photo :hidden)))
+  (let [prev-display (photo-by-order @displaying)
+        photo (photo-by-order id)]
+    (reset! displaying id)
+    (dom/add-class! prev-display :hidden)
+    (dom/remove-class! photo :hidden)
+    (if (is-gallery-page-with-thumbnails) (.replaceState js/window.history {} "" id))))
+
+(defn- add-thumbnail-listeners! []
+  (let [thumbs (dom/sel :.thumb)]
+    (doseq [thumb thumbs]
+      (dom/listen! thumb :click (fn [e] (display-photo! (dom/attr (.-target e) :data-order)))))))
 
 (if (is-gallery-page-with-thumbnails)
-  (do (display-photo! (display-id))
-    (println (display-id))))
+  (do (display-photo! (display-id-from-pathname))
+    (add-thumbnail-listeners!)))
