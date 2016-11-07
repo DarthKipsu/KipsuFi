@@ -16,6 +16,10 @@
       img {
         width: 100%;
       }
+
+      .gallery-photo.hidden {
+        display: block !important;
+      }
     }
 
     .thumbs {
@@ -30,11 +34,27 @@
     padding: 0;
 
     .faces {
-      img {
+      width: 100%;
+
+      .gallery-photo {
         width: auto;
-        margin: 0 10vw;
-        max-width: 80vw;
-        max-height: 80vh;
+        margin: 0 auto;
+        max-width: 1020px;
+        max-height: calc("80vh + 20px");
+        border: 1px solid #aaa;
+        padding: 10px;
+
+        &.hidden {
+          display: none !important;
+        }
+
+        img {
+          width: auto;
+          height: auto;
+          margin: 0 auto;
+          max-width: 1000px;
+          max-height: 80vh;
+        }
       }
     }
 
@@ -43,7 +63,10 @@
     }
 
     .title {
-      padding: 5vh 10vw;
+      width: 100%;
+      font-size: 3vmin;
+      text-align: center;
+      padding: 2vh 10vw;
     }
 
   }

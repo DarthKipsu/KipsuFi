@@ -8,8 +8,8 @@
 
 
 (defn single-item [n image]
-  [:div.gallery-selector
-   [:img {:src (:url image) :data-order (inc n)}]
+  [:div.gallery-photo.hidden {:data-order (inc n)}
+   [:img {:src (:url image)}]
    [:p (:description image)]])
 
 (defn single-thumb [n image]

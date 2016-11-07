@@ -38,6 +38,11 @@
          (photo-gallery/content gallery) 
          photo-gallery/options
          (gallery-back (str "/photos/" country) country :country)))
+  (GET "/photos/:country/:gallery/:photo" [country gallery photo]
+       (layout/common-wrapper
+         (photo-gallery/content gallery) 
+         photo-gallery/options
+         (gallery-back (str "/photos/" country) country :country)))
   (route/not-found "Not Found"))
 
 (def app
