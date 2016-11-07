@@ -218,7 +218,7 @@
      (conj array [:path item])))
 
 (defn ^:private gallery-links [country gallery]
-     [:a {:xlink:href (str "/photos/" country "/" (:title gallery))
+     [:a {:xlink:href (str "/photos/" country "/" (:title gallery) "/1")
           :xlink:title (:title gallery)}
       [:circle {:cx (:cx gallery)
                 :cy (:cy gallery)

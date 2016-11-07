@@ -8,7 +8,8 @@
             [kipsufi.views.country :as photo-country]
             [kipsufi.views.gallery :as photo-gallery]
             [ring.adapter.jetty :as jetty]
-            [ring.middleware.defaults :refer [wrap-defaults site-defaults]])
+            [ring.middleware.defaults :refer [wrap-defaults site-defaults]]
+            [ring.util.response :as response])
   (:gen-class))
 
 (def pages
@@ -34,10 +35,7 @@
          photo-country/options
          (gallery-back "/photos" "Photography" :photos)))
   (GET "/photos/:country/:gallery" [country gallery]
-       (layout/common-wrapper
-         (photo-gallery/content gallery) 
-         photo-gallery/options
-         (gallery-back (str "/photos/" country) country :country)))
+       (response/redirect (str "/photos/" country "/" gallery "/1") 307))
   (GET "/photos/:country/:gallery/:photo" [country gallery photo]
        (layout/common-wrapper
          (photo-gallery/content gallery) 
