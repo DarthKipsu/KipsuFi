@@ -93,7 +93,11 @@
       (dom/listen! thumb :click (fn [e] (display-photo! (dom/attr (.-target e) :data-order))
                                   (adj-thumb-width! @displaying))))))
 
+(defn- add-window-resize-listener! []
+  (dom/listen! js/window :resize (fn [] (adj-thumb-width! @displaying))))
+
 (if (is-gallery-page-with-thumbnails)
   (do (display-photo! (display-id-from-pathname))
     (add-thumbnail-listeners!)
-    (adj-thumb-width! @displaying)))
+    (adj-thumb-width! @displaying)
+    (add-window-resize-listener!)))
