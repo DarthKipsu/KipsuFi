@@ -13,7 +13,7 @@
    [:p (:description image)]])
 
 (defn single-thumb [n image]
-  [:img.thumb {:src (:thumb image) :data-order (inc n)}])
+  [:img.thumb.faded {:src (:thumb image) :data-order (inc n)}])
 
 (defn as-list [photos]
   (map-indexed single-item photos))

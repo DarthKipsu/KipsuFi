@@ -61,6 +61,21 @@
 
     .thumbs {
       display: inline-block;
+      cursor: pointer;
+      max-width: 80vw;
+      margin: 0 10vw;
+
+      .thumb {
+        height: 100px;
+
+        &.faded {
+          opacity: 0.5;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
     }
 
     .title {
