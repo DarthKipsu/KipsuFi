@@ -41,6 +41,7 @@
          (photo-gallery/content gallery) 
          photo-gallery/options
          (gallery-back (str "/photos/" country) country :country)))
+  (route/resources "/")
   (route/not-found "Not Found"))
 
 (def app
