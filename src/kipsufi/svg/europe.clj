@@ -226,10 +226,10 @@
                 :cy (:cy gallery)
                 :r (:r gallery)}]]
       (let [gallery-n (- (count gallery-list) 4)
-            x (Integer/parseInt (first gallery-list))
-            y (Integer/parseInt (second gallery-list))
-            width (Integer/parseInt (get gallery-list 2))
-            line-height (Integer/parseInt (get gallery-list 3))]
+            x (read-string (first gallery-list))
+            y (read-string (second gallery-list))
+            width (read-string (get gallery-list 2))
+            line-height (read-string (get gallery-list 3))]
      [:g.gallerylist
       [:circle {:cx (:cx gallery)
                 :cy (:cy gallery)
