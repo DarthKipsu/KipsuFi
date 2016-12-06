@@ -36,12 +36,14 @@
   "Creates svg circle attriutes for a given gallery."
   [gallery]
   (let [id (str/replace gallery #" " "")
-        coord (str/split (read-file photo-dir gallery "coord") #" ")]
+        coord (str/split (read-file photo-dir gallery "coord") #" ")
+        gallerylist (str/split (read-file photo-dir gallery "gallerylist") #",")]
     {:id id
      :title gallery
      :cx (first coord)
      :cy (second coord)
-     :r (nth coord 2)}))
+     :r (nth coord 2)
+     :gallerylist (if (= gallerylist [""]) [] gallerylist)}))
 
 (defn ^:private directories
   "Returns a list of immediate child directories for a given path."
@@ -81,6 +83,8 @@
   (let [directory-list (directories photo-dir)
         galleries (filter (fn [gallery] (= country (gallery-country gallery))) directory-list)
         gallery-attributes (into [] (map svg-circle galleries))]
+    (println directory-list)
+    (println gallery-attributes)
     gallery-attributes))
 
 (defn photos

@@ -21,6 +21,34 @@
       circle {
         fill: red;
       }
+
+      g.gallerylist {
+        rect {
+          visibility: hidden;
+        }
+
+        g {
+          visibility: hidden;
+        }
+      }
+
+      g.gallerylist:hover {
+        rect {
+          visibility: visible;
+          fill: white;
+          stroke: #b5bcb5;
+          stroke-opacity: 0.5;
+          stroke-width: 0.5;
+        }
+
+        circle {
+          fill: green;
+        }
+
+        g {
+          visibility: visible;
+        }
+      }
     }
   }
 

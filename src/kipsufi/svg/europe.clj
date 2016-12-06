@@ -218,11 +218,32 @@
      (conj array [:path item])))
 
 (defn ^:private gallery-links [country gallery]
+  (let [gallery-list (:gallerylist gallery)]
+    (if (empty? gallery-list)
      [:a {:xlink:href (str "/photos/" country "/" (:title gallery) "/1")
           :xlink:title (:title gallery)}
       [:circle {:cx (:cx gallery)
                 :cy (:cy gallery)
-                :r (:r gallery)}]])
+                :r (:r gallery)}]]
+      (let [gallery-n (- (count gallery-list) 4)
+            x (Integer/parseInt (first gallery-list))
+            y (Integer/parseInt (second gallery-list))
+            width (Integer/parseInt (get gallery-list 2))
+            line-height (Integer/parseInt (get gallery-list 3))]
+     [:g.gallerylist
+      [:circle {:cx (:cx gallery)
+                :cy (:cy gallery)
+                :r (:r gallery)}]
+      [:rect {:x x :y y :width width 
+              :height (* line-height (inc gallery-n))}]
+      (reduce conj [:g]
+              (map-indexed (fn [i link] 
+                             [:a {:xlink:href (str "/photos/" country "/" link "/1")
+                                  :xlink:title link} 
+                              [:text {:x (+ x (* 0.5 line-height)) :y (+ y (* (inc i) line-height))
+                                      :font-size (dec line-height)}
+                                link]])
+                   (take-last gallery-n gallery-list)))]))))
 
 (defn europe-map [photographed]
   (let [countries-with-links
