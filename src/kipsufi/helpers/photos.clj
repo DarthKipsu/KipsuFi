@@ -1,6 +1,6 @@
 (ns kipsufi.helpers.photos
   (:require [clojure.java.io :as io]
-            [clojure.string :as str])
+            [clojure.string :as string])
   (:import java.io.File))
 
 ; PRIVATE
@@ -24,7 +24,7 @@
   [path folder file]
   (try
     (without-newline
-      (slurp (str path folder "/" file)))
+      (slurp (string/trim (str path folder "/" file))))
     (catch Exception e "")))
 
 (defn ^:private gallery-country
@@ -35,9 +35,9 @@
 (defn ^:private svg-circle
   "Creates svg circle attributes for a given gallery."
   [gallery]
-  (let [id (str/replace gallery #" " "")
-        coord (str/split (read-file photo-dir gallery "coord") #" ")
-        gallerylist (str/split (read-file photo-dir gallery "gallerylist") #",")]
+  (let [id (string/replace gallery #" " "")
+        coord (string/split (read-file photo-dir gallery "coord") #" ")
+        gallerylist (string/split (read-file photo-dir gallery "gallerylist") #",")]
     {:id id
      :title gallery
      :cx (first coord)
@@ -66,7 +66,7 @@
      :thumb (str directory gallery "/thumbs/" photo-name)
      :id (Integer/parseInt id)
      :gallery gallery
-     :description (read-file directory gallery (str "photo" id))}))
+     :description (read-file (str "clj" directory) gallery (str "photo" id))}))
 
 ; PUBLIC
 
@@ -83,8 +83,6 @@
   (let [directory-list (directories photo-dir)
         galleries (filter (fn [gallery] (= country (gallery-country gallery))) directory-list)
         gallery-attributes (into [] (map svg-circle galleries))]
-    (println directory-list)
-    (println gallery-attributes)
     gallery-attributes))
 
 (defn photos

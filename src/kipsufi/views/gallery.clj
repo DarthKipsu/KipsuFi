@@ -10,7 +10,7 @@
 (defn single-item [n image]
   [:div.gallery-photo.hidden {:data-order (inc n)}
    [:img {:src (:url image)}]
-   [:p (:description image)]])
+   [:p.description (:description image)]])
 
 (defn single-thumb [n image]
   [:img.thumb.faded {:src (:thumb image) :data-order (inc n)}])
