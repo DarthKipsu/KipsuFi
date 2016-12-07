@@ -33,7 +33,7 @@
   (read-file photo-dir gallery "country"))
 
 (defn ^:private svg-circle
-  "Creates svg circle attriutes for a given gallery."
+  "Creates svg circle attributes for a given gallery."
   [gallery]
   (let [id (str/replace gallery #" " "")
         coord (str/split (read-file photo-dir gallery "coord") #" ")
