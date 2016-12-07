@@ -30,7 +30,8 @@
 (defn ^:private gallery-country
   "Reads the country attribute of an individual gallery"
   [gallery]
-  (read-file photo-dir gallery "country"))
+  (try (read-file photo-dir gallery "country")
+    (catch Exception e "")))
 
 (defn ^:private svg-circle
   "Creates svg circle attributes for a given gallery."
