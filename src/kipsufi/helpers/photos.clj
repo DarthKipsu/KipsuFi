@@ -91,3 +91,17 @@
   [gallery]
   (let [photos (read-photos (io/file photo-dir gallery))]
     (sort-by :id (map (partial photo-object (str (.substring photo-dir 3 (count photo-dir))) gallery) photos))))
+
+(defn next-photo
+  "returns the next photo in a gallery given a photo"
+  [gallery photo]
+  (let [photo-i (read-string photo)
+        photos (read-photos (io/file photo-dir gallery))]
+    (if (= photo-i (count photos)) 1 (inc photo-i))))
+
+(defn prev-photo
+  "Returns the previous photo in gallery givn a photo"
+  [gallery photo]
+  (let [photo-i (read-string photo)
+        photos (read-photos (io/file photo-dir gallery))]
+    (if (= photo-i 1) (count photos) (dec photo-i))))

@@ -29,6 +29,30 @@
 (defn- thumb-by-order [order]
   (first (filter (fn [item] (= order (dom/attr item :data-order))) (dom/sel :img.thumb))))
 
+(defn- next-arrow []
+  (.item (.-children (dom/sel1 :.nav.next)) 0))
+
+(defn- prev-arrow []
+  (.item (.-children (dom/sel1 :.nav.prev)) 0))
+
+(defn- next-link []
+  (.item (.-children (.item (.-children (dom/sel1 :.links.next)) 0)) 0))
+
+(defn- prev-link []
+  (.item (.-children (.item (.-children (dom/sel1 :.links.prev)) 0)) 0))
+
+(defn- update-link! [link new-i]
+  (let [href-base (str/join "/" (drop-last (str/split (.-href link) "/")))]
+    (.setAttribute link "href" (str href-base "/" new-i))))
+
+(defn- next-photo [id]
+  (let [next-id (inc (int id))]
+    (if (>= next-id photos-in-gallery) 1 next-id)))
+
+(defn- prev-photo [id]
+  (let [prev-id (dec (int id))]
+    (if (<= next-id 0) photos-in-gallery prev-id)))
+
 (defn- display-photo! [id]
   (let [prev-display (photo-by-order @displaying)
         prev-thumb (thumb-by-order @displaying)
@@ -96,8 +120,23 @@
 (defn- add-window-resize-listener! []
   (dom/listen! js/window :resize (fn [] (adj-thumb-width! @displaying))))
 
+(defn- add-arrow-click-listeners! []
+  (dom/listen! (next-link) :click (fn [e] 
+    (display-photo! (if (>= @displaying photos-in-gallery) "1" (str (inc (int @displaying)))))
+    (adj-thumb-width! @displaying)))
+  (dom/listen! (next-arrow) :click (fn [e] 
+    (display-photo! (if (>= @displaying photos-in-gallery) "1" (str (inc (int @displaying)))))
+    (adj-thumb-width! @displaying)))
+  (dom/listen! (prev-link) :click (fn [e] 
+    (display-photo! (if (<= @displaying 1) (str photos-in-gallery) (str (dec (int @displaying)))))
+    (adj-thumb-width! @displaying)))
+  (dom/listen! (prev-arrow) :click (fn [e] 
+    (display-photo! (if (<= @displaying 1) (str photos-in-gallery) (str (dec (int @displaying)))))
+    (adj-thumb-width! @displaying))))
+
 (if (is-gallery-page-with-thumbnails)
   (do (display-photo! (display-id-from-pathname))
     (add-thumbnail-listeners!)
     (adj-thumb-width! @displaying)
+    (add-arrow-click-listeners!)
     (add-window-resize-listener!)))

@@ -40,7 +40,7 @@
        (layout/common-wrapper
          (photo-gallery/content gallery) 
          photo-gallery/options
-         (gallery-back (str "/photos/" country) country :country)))
+         (photo-gallery/pages pages country gallery photo)))
   (route/resources "/")
   (route/not-found "Not Found"))
 

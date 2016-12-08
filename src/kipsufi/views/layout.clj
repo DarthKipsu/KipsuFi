@@ -21,6 +21,13 @@
   (let [rotated-seq (reduce #(conj %1 %2) '() a-seq)]
     (cond (= (:key options) :country) 
             (let [gallery (first a-seq)] (conj (drop-last rotated-seq) gallery))
+          (= (:key options) :gallery)
+            (let [country (nth a-seq 1)
+                  gallery (nth a-seq 2) 
+                  next-photo (first a-seq) 
+                  prev-photo (last a-seq)
+                  rest-pages (drop 1 (take (- (count a-seq) 3) rotated-seq))]
+              (conj (into [prev-photo country gallery] rest-pages) next-photo))
           :else rotated-seq)))
 
 (defn ^:private arrow [direction pages]
@@ -29,14 +36,14 @@
    [:a {:href (get (first pages) :href)
         :title (get (first pages) :title)}
     (svg/arrow {:direction direction})]
-   (reduce conj [:div.links] (map (fn [page] [:p [:a {:href (:href page) :title (:title page)}
-                                        (:title page)]]) pages))])
+   (reduce conj [:div {:class (str "links " direction)}] 
+           (map (fn [page] [:p [:a {:href (:href page) :title (:title page)}
+                                (:title page)]]) pages))])
 
 (defn common-wrapper [content options pages]
   (let [current-index (page-index pages (get options :key))
         n-pages (next-pages pages current-index)
         p-pages (rotated n-pages options)]
-    (println "prev:" p-pages)
     (h/html5
       [:head
        [:meta {:charset "utf-8"}]
@@ -47,8 +54,8 @@
       [:body
        [:section {:class (str "content " (if (:full-page? options) "full" "frame"))}
         content 
-        (arrow "next" n-pages) 
-        (arrow "prev" p-pages)]
+        (arrow "next" (if (= (:key options) :gallery) (drop-last n-pages) n-pages))
+        (arrow "prev" (if (= (:key options) :gallery) (drop-last p-pages) p-pages))]
        (h/include-js "//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
        (h/include-js "//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
        (h/include-js "/js/script.js")])))

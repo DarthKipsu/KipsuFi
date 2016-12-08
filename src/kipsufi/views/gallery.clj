@@ -6,6 +6,14 @@
               :title ":: Photography"
               :css "gallery"})
 
+(defn pages [const-pages country gallery photo]
+  (let [gallery-page (last const-pages)
+        rest-pages (drop-last const-pages)
+        this-page {:href (str "/photos/" country "/" gallery "/" photo) :title gallery :key :gallery}
+        next-page {:href "#" :title "Next photo" :key :next}
+        prev-page {:href "#" :title "Previous photo" :key :prev}
+        country-page {:href (str "/photos/" country) :title country :key :country}]
+    (conj [] this-page next-page country-page gallery-page (first rest-pages) (second rest-pages) prev-page)))
 
 (defn single-item [n image]
   [:div.gallery-photo.hidden {:data-order (inc n)}
