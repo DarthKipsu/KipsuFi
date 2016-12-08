@@ -16,9 +16,12 @@
     (for [x (range (inc current-index) (+ current-index n))]
       (get pages (mod x n)))))
 
-(defn ^:private rotated [a-seq]
+(defn ^:private rotated [a-seq options]
   "Rotates the items in the given sequence so they are in opposite order."
-  (reduce #(conj %1 %2) '() a-seq))
+  (let [rotated-seq (reduce #(conj %1 %2) '() a-seq)]
+    (cond (= (:key options) :country) 
+            (let [gallery (first a-seq)] (conj (drop-last rotated-seq) gallery))
+          :else rotated-seq)))
 
 (defn ^:private arrow [direction pages]
   "Returns a hiccup component representing a navigation arrow."
@@ -32,7 +35,8 @@
 (defn common-wrapper [content options pages]
   (let [current-index (page-index pages (get options :key))
         n-pages (next-pages pages current-index)
-        p-pages (rotated n-pages)]
+        p-pages (rotated n-pages options)]
+    (println "prev:" p-pages)
     (h/html5
       [:head
        [:meta {:charset "utf-8"}]

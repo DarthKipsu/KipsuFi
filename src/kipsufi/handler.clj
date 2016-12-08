@@ -33,7 +33,7 @@
        (layout/common-wrapper 
          (photo-country/content country)
          photo-country/options
-         (gallery-back "/photos" "Photography" :photos)))
+         (photo-country/pages pages country)))
   (GET "/photos/:country/:gallery" [country gallery]
        (response/redirect (str "/photos/" country "/" gallery "/1") 307))
   (GET "/photos/:country/:gallery/:photo" [country gallery photo]
