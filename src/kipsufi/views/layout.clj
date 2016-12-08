@@ -20,16 +20,19 @@
   "Rotates the items in the given sequence so they are in opposite order."
   (reduce #(conj %1 %2) '() a-seq))
 
-(defn ^:private arrow [direction href title]
+(defn ^:private arrow [direction pages]
   "Returns a hiccup component representing a navigation arrow."
-  [:a {:href href
-       :title title}
-   (svg/arrow {:direction direction})])
+  [:div {:class (str "nav " direction)} 
+   [:a {:href (get (first pages) :href)
+        :title (get (first pages) :title)}
+    (svg/arrow {:direction direction})]
+   (reduce conj [:div.links] (map (fn [page] [:p [:a {:href (:href page) :title (:title page)}
+                                        (:title page)]]) pages))])
 
 (defn common-wrapper [content options pages]
   (let [current-index (page-index pages (get options :key))
-        next-pages (next-pages pages current-index)
-        prev-pages (rotated next-pages)]
+        n-pages (next-pages pages current-index)
+        p-pages (rotated n-pages)]
     (h/html5
       [:head
        [:meta {:charset "utf-8"}]
@@ -40,8 +43,8 @@
       [:body
        [:section {:class (str "content " (if (:full-page? options) "full" "frame"))}
         content 
-        (arrow "next" (get (first next-pages) :href) (get (first next-pages) :title)) 
-        (arrow "prev" (get (first prev-pages) :href) (get (first prev-pages) :title))]
+        (arrow "next" n-pages) 
+        (arrow "prev" p-pages)]
        (h/include-js "//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
        (h/include-js "//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
        (h/include-js "/js/script.js")])))
