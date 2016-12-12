@@ -55,6 +55,10 @@ Then create a symlinks to the root of your project to be able to read the photos
 
     ln- s public/ clj
 
+Updating galleries for production after these steps is easy. No need to update uberjar, just use rsync for example to move the new galleries over:
+
+    rsync -av dev-dependencies/public/images/photography/ [server]:public/images/photography/
+
 ## Creating a photo gallery
 
 Place a new folder in your photography folder in dev-dependencies created in the previous section. The name of the folder will be used as the gallery name, in addition, the structure inside the folder should contain the following items:
