@@ -1,1 +1,1 @@
-resources/public/
+dev-dependencies/public/

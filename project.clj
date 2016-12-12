@@ -23,7 +23,8 @@
             [lein-lesscss "1.2"]
             [lein-ring "0.9.7"]]
   :profiles {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
-                                  [ring/ring-mock "0.3.0"]]}}
+                                  [ring/ring-mock "0.3.0"]]
+                   :resource-paths ["dev-dependencies"]}}
   :ring {:handler kipsufi.handler/app
          :port 5000})
   :url "darth.kipsu.fi"

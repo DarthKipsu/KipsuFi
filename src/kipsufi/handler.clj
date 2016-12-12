@@ -41,6 +41,7 @@
          (photo-gallery/content gallery) 
          photo-gallery/options
          (photo-gallery/pages pages country gallery photo)))
+  (route/files "/" {:root (str (System/getProperty "user.dir") "/public")})
   (route/resources "/")
   (route/not-found "Not Found"))
 
