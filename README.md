@@ -45,9 +45,19 @@ Which will create jar files to *target/* which you can use like any java applica
 
 ## Using photo galleries
 
-Photo galleries are generated from existing folder structure, so the only thing you need to do to add a new gallery is to add a new folder to *clj/images/photography* with the appropriate structure and the gallery will appear on the site.
+Photo galleries are generated from existing folder structure and not included in your uberjar to make it's size more manageable and allowing you to add photos without generating new uberjar each time. You need to do a bit of setup first and after that using them couldn't be easier.
 
-The name of the folder will be used as the gallery name, in addition, the structure inside the folder should contain the following items:
+Firstly, create a folder structure in the root of your project folder: *dev-dependencies/public/images/photography/* . You should add all galleries inside this folder as described in more details below in creating gallery section. You should already have a symlink called clj to link to these folders so that the photo api can read it.
+
+You are now ready to use the galleries locally. To use on production, copy all the galleries you have to your server to a folder called *public/images/photography/* (inside your project root).
+
+Then create a symlinks to the root of your project to be able to read the photos and their descriptions:
+
+    ln- s public/ clj
+
+## Creating a photo gallery
+
+Place a new folder in your photography folder in dev-dependencies created in the previous section. The name of the folder will be used as the gallery name, in addition, the structure inside the folder should contain the following items:
 
 - **Photos:** named photo1.jpg, photo2.jpg, ..., photoN.jpg (you can also use .png photos, if you need other types, add them to photos helper method *read-photos*)
 - **Photo descriptions:** named photo1, photo2, ..., photoN (optional)
